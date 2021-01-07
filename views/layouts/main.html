@@ -1,0 +1,179 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{{title}}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon
+		============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo/logo.jpeg">
+    <!-- Google Fonts
+		============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+	<!-- nalika Icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/nalika-icon.css">
+    <!-- owl.carousel CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.transitions.css">
+    <!-- animate CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- normalize CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- meanmenu icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/meanmenu.min.css">
+    <!-- main CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- morrisjs CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/morrisjs/morris.css">
+    <!-- mCustomScrollbar CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- metisMenu CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/metisMenu/metisMenu.min.css">
+    <link rel="stylesheet" href="css/metisMenu/metisMenu-vertical.css">
+    <!-- calendar CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/calendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="css/calendar/fullcalendar.print.min.css">
+    <!-- style CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- responsive CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/supermanic.css">
+      <!--================================Alertify Starts===========================================-->
+     <link rel="stylesheet" type="text/css" href="css/alertify.css">
+    {{#if profile}}
+    <link rel="stylesheet" href="css/profile.css">
+    {{/if}}
+    <!-- modernizr JS
+		============================================ -->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/bu2397nrjwaym42irturbwmkg7v0m6hu8cmlzyxqb2zd3fza/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+</head>
+
+                                                    {{{body}}}
+
+   <!-- jquery
+		============================================ -->
+        <script src="js/vendor/jquery-1.12.4.min.js"></script>
+        <!-- bootstrap JS
+            ============================================ -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- wow JS
+            ============================================ -->
+        <script src="js/wow.min.js"></script>
+        <!-- price-slider JS
+            ============================================ -->
+        <script src="js/jquery-price-slider.js"></script>
+        <!-- meanmenu JS
+            ============================================ -->
+        <script src="js/jquery.meanmenu.js"></script>
+        <!-- owl.carousel JS
+            ============================================ -->
+        <script src="js/owl.carousel.min.js"></script>
+        <!-- sticky JS
+            ============================================ -->
+        <script src="js/jquery.sticky.js"></script>
+        <!-- scrollUp JS
+            ============================================ -->
+        <script src="js/jquery.scrollUp.min.js"></script>
+        <!-- mCustomScrollbar JS
+            ============================================ -->
+        <script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="js/scrollbar/mCustomScrollbar-active.js"></script>
+        <!-- metisMenu JS
+            ============================================ -->
+        <script src="js/metisMenu/metisMenu.min.js"></script>
+        <script src="js/metisMenu/metisMenu-active.js"></script>
+        <!-- sparkline JS
+            ============================================ -->
+        <script src="js/sparkline/jquery.sparkline.min.js"></script>
+        <script src="js/sparkline/jquery.charts-sparkline.js"></script>
+        <!-- calendar JS
+            ============================================ -->
+        <script src="js/calendar/moment.min.js"></script>
+        <script src="js/calendar/fullcalendar.min.js"></script>
+        <script src="js/calendar/fullcalendar-active.js"></script>
+        <!-- float JS
+            ============================================ -->
+        <script src="js/flot/jquery.flot.js"></script>
+        <script src="js/flot/jquery.flot.resize.js"></script>
+        <script src="js/flot/curvedLines.js"></script>
+        <script src="js/flot/flot-active.js"></script>
+        <!-- plugins JS
+            ============================================ -->
+        <script src="js/plugins.js"></script>
+        <!-- main JS
+            ============================================ -->
+       
+        <script src="js/main.js"></script>
+      <!--  Alertify Files-->
+        <script src="js/alertify.min.js"></script>
+       <script src="js/alertify.js"></script>
+<!--=======================================API CONSUMPTION SCRIPTS====================================-->
+        <script src="js/helpers/easyHttp.js"></script>
+        
+        {{#if index}}
+           <script src="js/helpers/api/login.js"></script>
+        {{/if}}
+
+        {{#if home}}
+            <!-- <script src="js/helpers/tokenListener.js"></script>
+            <script src="js/helpers/office.js"></script> -->
+        {{/if}}
+
+        {{#if account}}
+            <!-- <script src="js/helpers/tokenListener.js"></script>
+            <script src="js/helpers/pay.js"></script> -->
+        {{/if}}
+        
+        {{#if activateMember}}
+            <!-- <script src="js/helpers/tokenListener.js"></script>
+            <script src="js/helpers/api/activateMember.js"></script> -->
+        {{/if}}    
+
+        {{#if cashoutRequest}}
+            <!-- <script src="js/helpers/tokenListener.js"></script>
+            <script src="js/helpers/api/disburstApi.js"></script>
+            <script src="js/helpers/api/getCashOutRequest.js"></script> -->
+        {{/if}} 
+
+        {{#if walletInfo}}
+        <!-- <script src="js/helpers/tokenListener.js"></script>
+        <script src="js/helpers/api/disburstApi.js"></script>
+        <script src="js/helpers/api/getCashOutRequest.js"></script> -->
+        {{/if}}
+        <script>
+          tinymce.init({
+            selector: 'textarea',
+            plugins: 'a11ychecker advcode casechange formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker',
+            toolbar: 'a11ycheck addcomment showcomments casechange checklist code formatpainter pageembed permanentpen table',
+            toolbar_mode: 'floating',
+            tinycomments_mode: 'embedded',
+            tinycomments_author: 'Author name',
+          });
+        </script>
+        
+    </body>
+    
+    </html>

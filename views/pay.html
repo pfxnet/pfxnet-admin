@@ -1,0 +1,39 @@
+
+<body class="container-fluid office-pad-top col-md-6 col-md-offset-3 ">
+ <form>
+  <script src="https://checkout.flutterwave.com/v3.js"></script>
+
+  <a href='#' class="btn btn-success btn-block" onClick="makePayment()" id="payNow">Pay Now</a>
+</form>
+
+<script>
+  function makePayment() {
+    FlutterwaveCheckout({
+      public_key: "FLWPUBK_TEST-ecb279a7038cfcd4e7b69c91765830bd-X",
+      tx_ref: "hooli-tx-1920bbtyt",
+      amount: 54600,
+      currency: "NGN",
+      payment_options: "card,mobilemoney,ussd",
+      redirect_url: // specified redirect URL
+        "https://callbacks.piedpiper.com/flutterwave.aspx?ismobile=34",
+      meta: {
+        consumer_id: 23,
+        consumer_mac: "92a3-912ba-1192a",
+      },
+      customer: {
+        email: "user@gmail.com",
+        phone_number: "08102909304",
+        name: "yemi desola",
+      },
+      callback: function (data) {
+        console.log(data);
+      },
+      customizations: {
+        title: "Property Trading Ltd",
+        description: "PAccount activation for pfxnet",
+        logo: "https://pfxnet.com/images/logo.png",
+      },
+    });
+  }
+</script> 
+</body>
