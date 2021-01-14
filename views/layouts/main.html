@@ -132,15 +132,22 @@
        <script src="js/alertify.js"></script>
 <!--=======================================API CONSUMPTION SCRIPTS====================================-->
         <script src="js/helpers/easyHttp.js"></script>
+        <script src="js/helpers/tokenListener.js"></script>
+        <script src="js/helpers/office.js"></script>
         
         {{#if index}}
            <script src="js/helpers/api/login.js"></script>
         {{/if}}
 
         {{#if home}}
-            <!-- <script src="js/helpers/tokenListener.js"></script>
-            <script src="js/helpers/office.js"></script> -->
+            <script src="js/helpers/domInsert/newRegister.js"></script>
+            <script src="js/helpers/api/appStat.js"></script>
         {{/if}}
+
+        {{#if settings}}
+            <script src="js/helpers/api/settings.js"></script>
+        {{/if}}
+
 
         {{#if account}}
             <!-- <script src="js/helpers/tokenListener.js"></script>

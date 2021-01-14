@@ -35,7 +35,7 @@ app.use('/',viewRouter)
 //   cert: fs.readFileSync('cert.pem')
 // };
 
-const PORT = process.env.PORT || 8003 || '0.0.0.0';
+const PORT = process.env.PORT || 7003 || '0.0.0.0';
 // const PORT = process.env.PORT || 8003;
 // https.createServer(options, app)
 app.listen(PORT,()=>{

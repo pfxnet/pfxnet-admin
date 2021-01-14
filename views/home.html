@@ -71,7 +71,7 @@
 
                             <hr class="hr">
                             <div class="stats-row">
-                              <h4 class="font-white">175 </h4>
+                              <h4 class="font-white" id="totalMembers">175 </h4>
                               
                             </div>
 
@@ -83,7 +83,7 @@
                             <h3 class="smallTitle">Total Revenue Received (Credit)</h3>
                             <hr class="hr">
                             <div class="stats-row">
-                              <h4 class="font-white"><span>&#36;</span> 175,00,00</h4>
+                              <h4 class="font-white" id="totalRevenueReceived">---</h4>
                               
                             </div>
                           <!--   <div id="sparkline8">175</div> -->
@@ -94,7 +94,7 @@
                             <h3 class="smallTitle">Total Cash Payout (Debit)</h3>
                             <hr class="hr">
                                 <div class="stats-row">
-                              <h4 class="font-white"><span>&#36;</span> 175,00,00</h4>
+                              <h4 class="font-white" id="totalCashPayout">---</h4>
                               
                             </div>
                           <!--   <div id="sparkline8">175</div> -->
@@ -112,7 +112,7 @@
 
                             <hr class="hr">
                             <div class="stats-row">
-                              <h4 class="font-white"><span>&#36;</span>175 </h4>
+                              <h4 class="font-white" id="affiliateCashoutRequest">---</h4>
                               
                             </div>
 
@@ -124,7 +124,7 @@
                             <h3 class="smallTitle">Commission Paid Out</h3>
                             <hr class="hr">
                             <div class="stats-row">
-                              <h4 class="font-white"><span>&#36;</span> 175,00,00</h4>
+                              <h4 class="font-white" id="commisionPayout">---</h4>
                               
                             </div>
                           <!--   <div id="sparkline8">175</div> -->
@@ -135,7 +135,7 @@
                             <h3 class="smallTitle">Auto Upgrade Balance</h3>
                             <hr class="hr">
                                 <div class="stats-row">
-                              <h4 class="font-white"><span>&#36;</span> 175,00,00</h4>
+                              <h4 class="font-white" id="totalUpgradeWallet">---</h4>
                               
                             </div>
                           <!--   <div id="sparkline8">175</div> -->
@@ -153,7 +153,7 @@
 
                         <hr class="hr">
                         <div class="stats-row">
-                          <h4 class="font-white"><span>&#36;</span>175 </h4>
+                          <h4 class="font-white" id="totalIncentiveWallet">---</h4>
                           
                         </div>
 
@@ -165,7 +165,7 @@
                         <h3 class="smallTitle">Land Purchase Balance</h3>
                         <hr class="hr">
                         <div class="stats-row">
-                          <h4 class="font-white"><span>&#36;</span> 175,00,00</h4>
+                          <h4 class="font-white" id="totalLandPurchaseWallet"></h4>
                           
                         </div>
                       <!--   <div id="sparkline8">175</div> -->
@@ -176,7 +176,7 @@
                         <h3 class="smallTitle">Property Trading Pool Balance</h3>
                         <hr class="hr">
                             <div class="stats-row">
-                          <h4 class="font-white"><span>&#36;</span> 175,00,00</h4>
+                          <h4 class="font-white" id="totalPropertyPoolWallet"></h4>
                           
                         </div>
                       <!--   <div id="sparkline8">175</div> -->
@@ -209,39 +209,27 @@
                     
                         <div class="product-list-cart">
                             <div class="product-status-wrap border-pdt-ct table-responsive">                                  
-                                    <table style="width:100%" class="table table-borderless ">
-                                        <br>
-                                        <h4>New Registrations</h4>
-                                        <tr>
-                                            <th>#</th>
-                                            <!-- <th>Image</th> -->
-                                            <th></th>
-                                            <th>Username</th>
-                                            <th>Full name</th>
-                                            <th>Email</th>
-                                            <th>Phone</th>
-                                            <th>Date Of Joining</th>
-                                    
-                                        </tr>
-                                        <tbody id="CashOutRequestDom">
-                                            <tr> 
-                                               <td style="text-align: center; position: absolute; left: 35%;"> 
-                                                    Fetching Newly Registered Members, Please wait ...
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <div id="pagination" class="custom-pagination">
-                                        <ul class="pagination" style="float: right;">
-                                            <li id="prev-page" class="page-item"><a class="page-link" id="prev-page-a" style="border: 1px solid tomato; cursor: pointer;">Prev</a></li>
-                                            <!-- <li data-tab="tab-1" class="page-item"><a class="page-link" id="tab-1">1</a></li>
-                                            <li data-tab="tab-2" class="page-item"><a class="page-link" id="tab-2">2</a></li>
-                                            <li data-tab="tab-3" class="page-item"><a class="page-link" id="tab-3">3</a></li> -->
-                                            <li id="next-page" class="page-item"><a class="page-link" id="next-page-a" style="border: 1px solid lightgreen; border-left: 0px; cursor: pointer;">
-                                               Next
-                                            </a></li>
-                                        </ul>
-                                    </div>
+                                  <table style="width:100%" class="table table-borderless ">
+                                      <br>
+                                      <h4>New Registrations</h4>
+                                      <tr>
+                                          <th>#</th>
+                                          <th>Username</th>
+                                          <th>Full name</th>
+                                          <th>Email</th>
+                                          <th>Phone</th>
+                                          <th>Referral</th>
+                                          <th>Date Of Joining</th>
+                                  
+                                      </tr>
+                                      <tbody id="newRegistrations">
+                                          <tr> 
+                                              <td style="text-align: center; position: absolute; left: 35%;"> 
+                                                  Fetching Newly Registered Members, Please wait ...
+                                              </td>
+                                          </tr>
+                                      </tbody>
+                                  </table>
                             </div>
                         </div>
    

@@ -1,6 +1,5 @@
 
-let http = new EasyHTTP;
-const loginBtn = document.querySelector('#loginbtn');
+const loginBtn = document.querySelector('#loginbtn') || false;
 console.log('open for business')
 
 function loginUser(e){
@@ -31,9 +30,9 @@ function loginUser(e){
             console.log(response)
             localStorage.setItem('@pfxnet-admin-token', JSON.stringify(response.token))
             localStorage.setItem('@pfxnet-admin-user', JSON.stringify(response.user))
-            //location.replace(`http://localhost:8003/home`);
-            //location.replace(`https://pfxnet-admin.herokuapp.com/home`);
-            location.replace(`https://admin.pfxnet.com/home`);
+            location.replace(`http://localhost:7003/home`);
+            // location.replace(`https://pfxnet-admin.herokuapp.com/home`);
+            // location.replace(`https://admin.pfxnet.com/home`);
           }
         } 
      })
@@ -45,5 +44,7 @@ function loginUser(e){
     })
 }
 
-loginBtn.addEventListener('click',loginUser)
+if(loginBtn) {
+  loginBtn.addEventListener('click',loginUser)
+}
  
