@@ -10,8 +10,6 @@ const settingJoined = document.querySelector("#settingJoined")
 const settingReferralTitle = document.querySelector("#settingReferralTitle")
 const settingReferralLink = document.querySelector("#settingReferralLink")
 
-console.log(copyRefLink)
-
 //Edit Query 
 const settingFirstnameEdit = document.querySelector("#settingFirstnameEdit")
 const settingLastnameEdit = document.querySelector("#settingLastnameEdit")
@@ -48,7 +46,9 @@ const findToEditUser = (e) => {
     })
 }
 
-settingSearchInput.addEventListener('keyup', (e) => findToEditUser(e))
+if(settingSearchInput) {
+    settingSearchInput.addEventListener('keyup', (e) => findToEditUser(e))
+}
 
 
 
@@ -72,4 +72,6 @@ const copyReferralLink = (e) => {
 //     alert("Copied the text: " + copyText.value);
 //   }
 
-copyRefLink.addEventListener('click', (e) => copyReferralLink(e))
+if(copyRefLink) {
+    copyRefLink.addEventListener('click', (e) => copyReferralLink(e))
+}

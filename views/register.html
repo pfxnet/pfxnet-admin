@@ -55,7 +55,7 @@
                                   
                                             <div class="input-group mg-b-pro-edt" style="width: 100%;">
                                                 <!-- <span class="input-group-addon"><i class="icon nalika-picture" aria-hidden="true"></i></span> -->
-                                                <select class="form-control custom-select-value" name="account" >
+                                                <select id="regUserPackage" class="form-control custom-select-value" name="account" >
                                                     <option value="#">Select Packages</option>
                                                     <option value="1">Mono pack</option>
                                                     <option value="2">Mono pro</option>
@@ -78,25 +78,25 @@
                                      
                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                 <div class="review-content-section">
-                                                    <label>Referral Name</label>
+                                                    <label>Referral User Id</label>
                                                     <div class="input-group mg-b-pro-edt">
                                                       <span class="input-group-addon"><i class="icon nalika-picture" aria-hidden="true"></i></span>
-                                                      <input type="text" class="form-control" placeholder="">
+                                                      <input id="referralUserId" type="text" class="form-control" placeholder="">
                                                   </div>
                                                     <label>First Name</label>
                                                     <div class="input-group mg-b-pro-edt">
                                                         <span class="input-group-addon"><i class="icon nalika-cloud" aria-hidden="true"></i></span>
-                                                        <input type="text" class="form-control" placeholder="">
+                                                        <input id="regFirstName" type="text" class="form-control" placeholder="">
                                                     </div>
                                                     <label>Email</label>
                                                     <div class="input-group mg-b-pro-edt">
                                                         <span class="input-group-addon"><i class="icon nalika-picture" aria-hidden="true"></i></span>
-                                                        <input type="text" class="form-control" placeholder="">
+                                                        <input id="regUserEmail" type="text" class="form-control" placeholder="">
                                                     </div>
                                                      <label>Password</label>
                                                       <div class="input-group mg-b-pro-edt">
                                                         <span class="input-group-addon"><i class="icon nalika-picture" aria-hidden="true"></i></span>
-                                                        <input type="text" class="form-control" placeholder="">
+                                                        <input id="regUserPassword" type="text" class="form-control" placeholder="">
                                                     </div>
                                                  
                                             
@@ -107,22 +107,22 @@
                                                     <label>Username</label>
                                                     <div class="input-group mg-b-pro-edt">
                                                         <span class="input-group-addon"><i class="icon nalika-team" aria-hidden="true"></i></span>
-                                                        <input type="text" class="form-control" placeholder="">
+                                                        <input id="regUserName" type="text" class="form-control" placeholder="">
                                                     </div>
                                                     <label>Last Name</label>
                                                     <div class="input-group mg-b-pro-edt">
                                                         <span class="input-group-addon"><i class="icon nalika-edit" aria-hidden="true"></i></span>
-                                                        <input type="text" class="form-control" placeholder="">
+                                                        <input id="regLastName" type="text" class="form-control" placeholder="">
                                                     </div>
                                                     <label>Phone</label>
                                                     <div class="input-group mg-b-pro-edt">
                                                         <span class="input-group-addon"><i class="icon nalika-tick" aria-hidden="true"></i></span>
-                                                        <input type="text" class="form-control" placeholder="">
+                                                        <input id="regUserPhone" type="text" class="form-control" placeholder="">
                                                     </div>
                                                     <label>Confirm Password</label>
                                                     <div class="input-group mg-b-pro-edt">
                                                         <span class="input-group-addon"><i class="icon nalika-edit" aria-hidden="true"></i></span>
-                                                        <input type="text" class="form-control" placeholder="">
+                                                        <input id="regUserConfirmPassword" type="text" class="form-control" placeholder="">
                                                     </div>
                                            
                                               
@@ -132,7 +132,7 @@
                                         <div class="row">
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <div class="text-center custom-pro-edt-ds bottom-pad-button">
-                                                    <button type="button" class="btn btn-ctl-bt waves-effect waves-light m-r-10 " style="background-color: #03A9F4">Sign Up
+                                                    <button id="adminRegMemberBtn" type="button" class="btn btn-ctl-bt waves-effect waves-light m-r-10 " style="background-color: #03A9F4">Register User
                                                         </button>
                                                    <!--  <button type="button" class="btn btn-ctl-bt waves-effect waves-light">Discard
                                                         </button> -->

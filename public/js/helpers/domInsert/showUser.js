@@ -8,11 +8,10 @@ const displayUserData = (data) => {
     settingEmailShow.textContent =  data != 'Empty Search..' ? data.mail : '----';
     settingPhoneShow.textContent = data != 'Empty Search..' ? data.phone : '----';
     settingJoined.textContent = data != 'Empty Search..' ? data.createdAt : '----';
-    settingReferralLink.value = data != 'Empty Search..' ? data.link : '';
+    settingReferralLink.value   = data != 'Empty Search..' ? data.link : '';
 }
 
 const inputForUpdate = (data) => {
-    console.log(data)
     settingFirstnameEdit.value = data.firstname ? data.firstname : '';
     settingLastnameEdit.value = data.lastname ? data.lastname : '';
     settingPhoneEdit.value = data.phone ? data.phone : '';

@@ -4,7 +4,6 @@ let token = null, user = null;
 let http = new EasyHTTP;
 
 const getAdmin = JSON.parse(localStorage.getItem('@pfxnet-admin-token'))
-console.log(getAdmin)
 
 if(getAdmin) {
     token = JSON.parse(localStorage.getItem('@pfxnet-admin-token'))
@@ -14,4 +13,3 @@ if(getAdmin) {
     // location.replace(`https://pfxnet-admin.herokuapp.com`);
     // location.replace(`https://admin.pfxnet.com`);
 }
-console.log(user)
