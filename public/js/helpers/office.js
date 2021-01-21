@@ -16,7 +16,7 @@ function logOut(e) {
 if(logOutAll) {
    logOutAll.map(x => {
       x.addEventListener('click', logOut)
-   })
+   })P
 }
 
 
