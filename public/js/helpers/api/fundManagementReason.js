@@ -56,7 +56,7 @@ const deductFundFunc = (e) => {
     e.preventDefault()
     console.log(e)
 
-    var formData = new FormData(addFund)
+    var formData = new FormData(deductFund)
     const userId =  formData.get('userID')
     const amount = Number(formData.get('amount'))
     const reason = formData.get('reason')
@@ -105,9 +105,10 @@ const transferFundFunc = (e) => {
     e.preventDefault()
     console.log(e)
 
-    var formData = new FormData(addFund)
+    var formData = new FormData(transferFund)
     const from =  formData.get('userIdFrom')
     const to =  formData.get('userIdTo')
+    console.log(from, to)
     const amount = Number(formData.get('amount'))
     const reason = formData.get('reason')
     const btn = document.querySelector('#transferFundBtn')
