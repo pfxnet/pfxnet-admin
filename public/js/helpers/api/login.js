@@ -30,9 +30,9 @@ function loginUser(e){
             console.log(response)
             localStorage.setItem('@pfxnet-admin-token', JSON.stringify(response.token))
             localStorage.setItem('@pfxnet-admin-user', JSON.stringify(response.user))
-            location.replace(`http://localhost:8003/home`);
+            //location.replace(`http://localhost:8003/home`);
             // location.replace(`https://pfxnet-admin.herokuapp.com/home`);
-            //location.replace(`https://admin.pfxnet.com/home`);
+            location.replace(`https://admin.pfxnet.com/home`);
           }
         } 
      })
