@@ -11,6 +11,12 @@ const disBurstApi = (e, x) => {
     console.log(transactionReference)
     const data = {transactionReference}
 
+    ;
+    if (!confirm("Are you sure to disburst, if yes click OK to continue or else cancle!")) {
+        return false;
+    } 
+
+    console.log("great work")
     http.post('api/disburseCashout', data)
     .then(response => {
         console.log(response)

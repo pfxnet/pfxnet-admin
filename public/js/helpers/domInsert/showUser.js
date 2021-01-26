@@ -18,7 +18,7 @@ const inputForUpdate = (data) => {
     settingDOBEdit.value = data.dob ? data.dob : '';
     settingGenderEdit.value = data.gender ? data.gender : '';
     settingAddressEdit.value = data.address ? data.address : '';
-    settingCountryEdit.value = data.address ? data.address : '';
+    settingCountryEdit.value = data.country ? data.country : '';
     settingStateEdit.value = data.state ? data.state : '';
     settingCityEdit.value = data.city ? data.city : '';
     settingUserIDEdit.value = data.userId ? data.userId : '';

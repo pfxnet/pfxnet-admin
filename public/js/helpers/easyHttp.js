@@ -56,6 +56,7 @@ class EasyHTTP{
  }
     // Make an HTTP POST Request
     async post(url,data){
+       console.log(url)
       
            try {
              const res = await fetch(`${api_origin}${url}`, {

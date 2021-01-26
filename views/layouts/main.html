@@ -125,7 +125,16 @@
         <script src="js/plugins.js"></script>
         <!-- main JS
             ============================================ -->
-       
+            <!-- <script>
+              tinymce.init({
+                selector: 'textarea',
+                plugins: 'a11ychecker advcode casechange formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker',
+                toolbar: 'a11ycheck addcomment showcomments casechange checklist code formatpainter pageembed permanentpen table',
+                toolbar_mode: 'floating',
+                tinycomments_mode: 'embedded',
+                tinycomments_author: 'Author name',
+              });
+            </script> -->
         <script src="js/main.js"></script>
       <!--  Alertify Files-->
         <script src="js/alertify.min.js"></script>
@@ -175,19 +184,15 @@
         {{/if}} 
 
         {{#if walletInfo}}
+        <script src="js/helpers/api/walletInfo.js"></script>
         <script src="js/helpers/api/disburstApi.js"></script>
         <script src="js/helpers/api/getCashOutRequest.js"></script>
         {{/if}}
-        <script>
-          tinymce.init({
-            selector: 'textarea',
-            plugins: 'a11ychecker advcode casechange formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker',
-            toolbar: 'a11ycheck addcomment showcomments casechange checklist code formatpainter pageembed permanentpen table',
-            toolbar_mode: 'floating',
-            tinycomments_mode: 'embedded',
-            tinycomments_author: 'Author name',
-          });
-        </script>
+        {{#if fundManagement}}
+        <script src="js/helpers/api/fundManagementReason.js"></script>
+        {{/if}}
+
+     
         
     </body>
     

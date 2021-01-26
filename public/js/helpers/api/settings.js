@@ -1,11 +1,12 @@
 
 const settingSearchInput = document.querySelector('#settingSearchInput');
 const copyRefLink = document.querySelector('#copyRefLink');
+const updateUsrBtn = document.querySelector("#update-user")
 
 //Show Query
 const settingNameShow = document.querySelector("#settingNameShow")
 const settingEmailShow = document.querySelector("#settingEmailShow")
-const settingPhoneShow= document.querySelector("#settingPhoneShow")
+const settingPhoneShow = document.querySelector("#settingPhoneShow")
 const settingJoined = document.querySelector("#settingJoined")
 const settingReferralTitle = document.querySelector("#settingReferralTitle")
 const settingReferralLink = document.querySelector("#settingReferralLink")
@@ -30,25 +31,26 @@ const findToEditUser = (e) => {
     console.log(userInfo)
 
     http.get(`api/searchUserProfile?search=${userInfo}`)
-    .then((data) => {
-        console.log(data)
-        if(data) {
-            //Show the User
-            inputForUpdate(data)
-            displayUserData(data)
-            copyRefLink.style.display = 'block';
-            
-        }
+        .then((data) => {
+            console.log(data)
+            if (data) {
+                //Show the User
+                inputForUpdate(data)
+                displayUserData(data)
+                copyRefLink.style.display = 'block';
+                updateUsrBtn.style.display = "block";
+            }
 
-    }).catch((err) => {
-       alertify.set('notifier', 'position', 'top-center');
-       return alertify.notify('<span style="color: white; font-weight: bold;">An error occurred, please check internet connection, refresh and try again</span>', 'error', 10)
-    })
+        }).catch((err) => {
+            alertify.set('notifier', 'position', 'top-center');
+            return alertify.notify('<span style="color: white; font-weight: bold;">An error occurred, please check internet connection, refresh and try again</span>', 'error', 10)
+        })
 }
 
-if(settingSearchInput) {
+if (settingSearchInput) {
     settingSearchInput.addEventListener('keyup', (e) => findToEditUser(e))
 }
+
 
 
 
@@ -61,17 +63,45 @@ const copyReferralLink = (e) => {
     // alert("Copied the text: " + copyText.value);
     copyRefLink.textContent = 'Copied';
     copyRefLink.style.background = 'black';
-  }
+}
 
-//   function myFunction(e) {
-//       e.preventDefault()
-//     var copyText = document.getElementById("myInput");
-//     copyText.select();
-//     copyText.setSelectionRange(0, 99999)
-//     document.execCommand("copy");
-//     alert("Copied the text: " + copyText.value);
-//   }
-
-if(copyRefLink) {
+if (copyRefLink) {
     copyRefLink.addEventListener('click', (e) => copyReferralLink(e))
 }
+
+
+const updateUsr = (e) => {
+    console.log(e)
+    console.log("open to play")
+    const data = {
+        firstname: settingFirstnameEdit.value, 
+        lastname: settingLastnameEdit.value,
+        phone: settingPhoneEdit.value,
+        gender: settingGenderEdit.value, 
+        address: settingAddressEdit.value,
+        country: settingCountryEdit.value, 
+        state: settingStateEdit.value,
+        city: settingCityEdit.value
+    }
+    http.post('admin/api/updateUserProfile', data)
+        .then(response => {
+            console.log(response)
+            if (response.error) {
+                alertify.set('notifier', 'position', 'top-center');
+                return alertify.notify(`<span style="color: white; font-weight: bold;">${response.error}</span>`, 'error', 10)
+            } else {
+                alertify.set('notifier', 'position', 'top-center');
+                alertify.notify(`<span style="color: white; font-weight: bold;">Disburse done successfully!</span>`, 'success', 10)
+            }
+        })
+        .catch(err => {
+            console.log(err)
+            alertify.set('notifier', 'position', 'top-center');
+            return alertify.notify('<span style="color: white; font-weight: bold;">An error occurred, please check internet connection, refresh and try again</span>', 'error', 10)
+        })
+}
+
+if(updateUsrBtn) {
+    updateUsrBtn.addEventListener('click', (e) => updateUsr(e))
+}
+

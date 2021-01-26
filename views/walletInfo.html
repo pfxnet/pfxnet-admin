@@ -21,15 +21,15 @@
                                             <div class="breadcomb-ctn row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <div  class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                                                     <h2>Total Credit</h2>
-                                                    <label class="label bg-green" style="font-size: larger;">N20,000</label>
+                                                    <label class="label bg-green" style="font-size: larger;" id="total-credit">---</label>
                                                 </div>
                                                 <div  class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                                                     <h2>Total Debit</h2>
-                                                    <label class="label bg-red" style="font-size: larger;">N20,000</label>
+                                                    <label class="label bg-red" style="font-size: larger;" id="total-debit">---</label>
                                                 </div>
                                                 <div  class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                                                     <h2>Balance Amount</h2>
-                                                    <label class="label bg-blue" style="font-size: larger;">N20,000</label>
+                                                    <label class="label bg-blue" style="font-size: larger;" id="balance-account">---</label>
                                                 </div>
                                            
                                             </div>
@@ -53,14 +53,14 @@
                                 <div class="breadcome-heading" style="float: right;">
                                     <form role="search" class="">
                                         <input type="text" placeholder="Search By Username" class="form-control">
-                                        <a href=""><i class="fa fa-search"></i></a>
+                                        <a href=""></a>
                                         
                                     </form>
                                 </div>
                                 <ul id="myTab3" class="tab-review-design">
-                                    <li class="active"><a href="#description">All Transactions<label class="label bg-blue">125</label></a> </li>
-                                    <li><a href="#reviews"> All Credits<label class="label bg-green">125</label></a></li>
-                                    <li><a href="#INFORMATION"> All Debits<label class="label bg-red">125</label></a></li>
+                                    <li class="active"><a href="#description">All Transactions<label class="label bg-blue" id="allTransactions">---</label></a> </li>
+                                    <li><a href="#reviews"> All Credits<label class="label bg-green" id="allCredits">---</label></a></li>
+                                    <li><a href="#INFORMATION"> All Debits<label class="label bg-red" id="allDebit">---</label></a></li>
                                 </ul>
                                 <div id="myTabContent" class="tab-content custom-product-edit">
                                     <div class="product-tab-list tab-pane fade active in" id="description">
@@ -70,18 +70,17 @@
                                                         <table style="width:100%" class="table table-borderless ">
                                                             <tr>
                                                                 <th>#</th>
-                                                                <!-- <th>Image</th> -->
+                                                                <th>Action</th>
+                                                                <th>Username</th>
                                                                 <th>Owner</th>
+                                                                <th>Phone</th>
+                                                                <th>Bank</th>
+                                                                <th>Email</th>
                                                                 <th>Credit</th>
                                                                 <th>Debit</th>
-                                                                <th>Reference</th>
-                                                                <th>Remark</th>
+                                                                <th>transactionReference</th>
                                                                 <th>Status</th>
-                                                                <th>Sender Username</th>
-                                                                <th>Receiver Username</th>
                                                                 <th>Created At</th>
-                                                              
-                                                               
                                                             </tr>
                                                             <tbody id="CashOutRequestDom">
                                                                 <tr> 
