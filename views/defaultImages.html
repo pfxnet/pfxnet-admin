@@ -18,23 +18,31 @@
                             <div class="col-md-8 col-md-8 col-sm-9 col-xs-12">
                                 <div class="row">
                                     <div class="col-md-3">
+
+                                        <style>
+                                            .upload-default-img {
+                                                display: none;
+                                            }
+                                        </style>
                                       
                                         <div class="hpanel mt-b-30">
                                             <div class="panel-body file-body file-cs-ctn">
                                                 <label>Mono Pack</label>
-                                               <img src="https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/2019/12/9-Best-Online-Avatars-and-How-to-Make-Your-Own-for-Free-image1-5.png">
+                                               <img id="package1"  class="image-preview" src="https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/2019/12/9-Best-Online-Avatars-and-How-to-Make-Your-Own-for-Free-image1-5.png">
                                             </div>
                                             <div class="panel-footer">
-                                                 <input id="uploadSelfieInput" type="file" class="form-control"/>  
+                                                 <input data-package="1" id="uploadSelfieInput" type="file" class="form-control default-images"/>  
+                                                 <button  id="packageBtn1" type="button" class="btn btn-success btn-block upload-default-img" style="margin-top: 5px;">Upload</button>
                                             </div>
                                         </div>
                                         <div class="hpanel mt-b-30">
                                             <div class="panel-body file-body file-cs-ctn">
                                                 <label>Mono Pro</label>
-                                               <img src="https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/2019/12/9-Best-Online-Avatars-and-How-to-Make-Your-Own-for-Free-image1-5.png">
+                                               <img id="package2"  class="image-preview" src="https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/2019/12/9-Best-Online-Avatars-and-How-to-Make-Your-Own-for-Free-image1-5.png">
                                             </div>
                                             <div class="panel-footer">
-                                                 <input id="uploadSelfieInput" type="file" class="form-control"/>  
+                                                 <input data-package="2" id="uploadSelfieInput" type="file" class="form-control default-images"/>  
+                                                 <button id="packageBtn2" type="button" class="btn btn-success btn-block upload-default-img" style="margin-top: 5px;">Upload</button>
                                             </div>
                                         </div>
                           
@@ -44,19 +52,21 @@
                                         <div class="hpanel mt-b-30">
                                             <div class="panel-body file-body file-cs-ctn">
                                                 <label>Mono Silver</label>
-                                               <img src="https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/2019/12/9-Best-Online-Avatars-and-How-to-Make-Your-Own-for-Free-image1-5.png">
+                                               <img id="package3" class="image-preview" src="https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/2019/12/9-Best-Online-Avatars-and-How-to-Make-Your-Own-for-Free-image1-5.png">
                                             </div>
                                             <div class="panel-footer">
-                                                 <input id="uploadSelfieInput" type="file" class="form-control"/>  
+                                                 <input data-package="3" id="uploadSelfieInput" type="file" class="form-control default-images"/> 
+                                                 <button id="packageBtn3" type="button" class="btn btn-success btn-block upload-default-img" style="margin-top: 5px;">Upload</button> 
                                             </div>
                                         </div>
                                         <div class="hpanel mt-b-30">
                                             <div class="panel-body file-body file-cs-ctn">
                                                 <label>Mono Gold</label>
-                                               <img src="https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/2019/12/9-Best-Online-Avatars-and-How-to-Make-Your-Own-for-Free-image1-5.png">
+                                               <img id="package4" class="image-preview" src="https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/2019/12/9-Best-Online-Avatars-and-How-to-Make-Your-Own-for-Free-image1-5.png">
                                             </div>
                                             <div class="panel-footer">
-                                                 <input id="uploadSelfieInput" type="file" class="form-control"/>  
+                                                 <input data-package="4" id="uploadSelfieInput" type="file" class="form-control default-images"/>  
+                                                 <button id="packageBtn4" type="button" class="btn btn-success btn-block upload-default-img" style="margin-top: 5px;">Upload</button>
                                             </div>
                                         </div>
                                     </div>
@@ -64,19 +74,21 @@
                                         <div class="hpanel mt-b-30">
                                             <div class="panel-body file-body file-cs-ctn">
                                                 <label>Mono Diamond</label>
-                                               <img src="https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/2019/12/9-Best-Online-Avatars-and-How-to-Make-Your-Own-for-Free-image1-5.png">
+                                               <img id="package5" class="image-preview" src="https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/2019/12/9-Best-Online-Avatars-and-How-to-Make-Your-Own-for-Free-image1-5.png">
                                             </div>
                                             <div class="panel-footer">
-                                                 <input id="uploadSelfieInput" type="file" class="form-control"/>  
+                                                 <input data-package="5" id="uploadSelfieInput" type="file" class="form-control default-images"/>  
+                                                 <button id="packageBtn5" type="button" class="btn btn-success btn-block upload-default-img" style="margin-top: 5px;">Upload</button>
                                             </div>
                                         </div>
                                         <div class="hpanel mt-b-30">
                                             <div class="panel-body file-body file-cs-ctn">
                                                 <label>Mono Star</label>
-                                               <img src="https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/2019/12/9-Best-Online-Avatars-and-How-to-Make-Your-Own-for-Free-image1-5.png">
+                                               <img id="package6" class="image-preview" src="https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/2019/12/9-Best-Online-Avatars-and-How-to-Make-Your-Own-for-Free-image1-5.png">
                                             </div>
                                             <div class="panel-footer">
-                                                 <input id="uploadSelfieInput" type="file" class="form-control"/>  
+                                                 <input data-package="6" id="uploadSelfieInput" type="file" class="form-control default-images"/>
+                                                 <button id="packageBtn6" type="button" class="btn btn-success btn-block upload-default-img" style="margin-top: 5px;">Upload</button>  
                                             </div>
                                         </div>
                               
@@ -86,34 +98,30 @@
                                         <div class="hpanel mt-b-30">
                                             <div class="panel-body file-body file-cs-ctn">
                                                 <label>MonoStar Pro</label>
-                                               <img src="https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/2019/12/9-Best-Online-Avatars-and-How-to-Make-Your-Own-for-Free-image1-5.png">
+                                               <img id="package7"  class="image-preview" src="https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/2019/12/9-Best-Online-Avatars-and-How-to-Make-Your-Own-for-Free-image1-5.png">
                                             </div>
                                             <div class="panel-footer">
-                                                 <input id="uploadSelfieInput" type="file" class="form-control"/>  
+                                                 <input data-package="7" id="uploadSelfieInput" type="file" class="form-control default-images"/>  
+                                                 <button id="packageBtn7" type="button" class="btn btn-success btn-block upload-default-img" style="margin-top: 5px;">Upload</button>
                                             </div>
                                         </div>
                                         <div class="hpanel mt-b-30">
                                             <div class="panel-body file-body file-cs-ctn">
                                                 <label>MonoStar Ultimate</label>
-                                               <img src="https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/2019/12/9-Best-Online-Avatars-and-How-to-Make-Your-Own-for-Free-image1-5.png">
+                                               <img id="package8" class="image-preview" src="https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/2019/12/9-Best-Online-Avatars-and-How-to-Make-Your-Own-for-Free-image1-5.png">
                                             </div>
                                             <div class="panel-footer">
-                                                 <input id="uploadSelfieInput" type="file" class="form-control"/>  
+                                                 <input data-package="8" id="uploadSelfieInput" type="file" class="form-control default-images"/>  
+                                                 <button id="packageBtn8" type="button" class="btn btn-success btn-block upload-default-img" style="margin-top: 5px;">Upload</button>
                                             </div>
                                         </div>
-                                     
-                                  
-                                       
                                     </div>
                                 </div>
-                            </div>
-                      
+                            </div>  
                         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
                     </div>
                 </div>
             </div>
-     
-
       {{>footer}}
     </div>
   

@@ -2,36 +2,34 @@
 
 
 //Trigger disbusrt btn from the cashOut api
-const passBtn = document.querySelector("#passChangeBtn");
-console.log("open")
-const passwordChange = (e) => {
+const welcomeMailBtn = document.querySelector("#welcomeMailBtn");
+
+const welcomeMailSend = (e) => {
     e.preventDefault();
 
     const data = {
-        userId: document.querySelector("#userId").value,
-        newPassword: document.querySelector("#newPassword").value
+        welcomeMail: document.querySelector("#welcome-mail").value
     }
 
     console.log(data)
 
-    console.log("Password")
-    passBtn.textContent = 'Updating...'
-    http.post('admin/api/passwordChange', data)
+    welcomeMailBtn.textContent = 'Sending...'
+    http.put('admin/api/updateWelcomeMailTemplate', data)
     .then(response => {
-        passBtn.textContent = 'Update'
+        welcomeMailBtn.textContent = 'Send'
         console.log(response)
         if (response.error) {
             alertify.set('notifier', 'position', 'top-center');
             return alertify.notify(`<span style="color: white; font-weight: bold;">${response.error}</span>`, 'error', 10)
         } else {   
             alertify.set('notifier', 'position', 'top-center');
-            alertify.notify(`<span style="color: white; font-weight: bold;">Password Changed Successfully!</span>`, 'success', 10)     
+            alertify.notify(`<span style="color: white; font-weight: bold;">${response.success}</span>`, 'success', 10)     
             setTimeout(() => {
                 location.reload()
             }, 2000);
         }
     }).catch(err => {
-        passBtn.textContent = 'Update'
+        welcomeMailBtn.textContent = 'Send'
         console.log(err)
         alertify.set('notifier', 'position', 'top-center');
         return alertify.notify('<span style="color: white; font-weight: bold;">An error occurred, please check internet connection, refresh and try again</span>', 'error', 10)
@@ -40,43 +38,41 @@ const passwordChange = (e) => {
 }
 
 
-passBtn.addEventListener('click', (e) => passwordChange(e))
-
+welcomeMailBtn.addEventListener('click', (e) => welcomeMailSend(e))
 
 
 
 
 
 //Trigger disbusrt btn from the cashOut api
-const userChangeBtn = document.querySelector("#changeUsernameBtn");
+const incentiveMailBtn = document.querySelector("#incentiveMailBtn");
 
-const userNameChange = (e) => {
+const incentiveMailSend = (e) => {
     e.preventDefault();
 
     const data = {
-        userId: document.querySelector("#userId_two").value,
-        newUsername: document.querySelector("#username_two").value
+        incentiveMail: document.querySelector("#incentive-mail").value
     }
 
     console.log(data)
 
-    passBtn.textContent = 'Processing...'
-    http.post('admin/api/usernameChange', data)
+    incentiveMailBtn.textContent = 'Sending...'
+    http.put('admin/api/updateincentiveMailTemplate', data)
     .then(response => {
-        passBtn.textContent = 'Change Username'
+        incentiveMailBtn.textContent = 'Send'
         console.log(response)
         if (response.error) {
             alertify.set('notifier', 'position', 'top-center');
             return alertify.notify(`<span style="color: white; font-weight: bold;">${response.error}</span>`, 'error', 10)
         } else {   
             alertify.set('notifier', 'position', 'top-center');
-            alertify.notify(`<span style="color: white; font-weight: bold;">Username Changed Successfully!</span>`, 'success', 10)     
+            alertify.notify(`<span style="color: white; font-weight: bold;">${response.success}</span>`, 'success', 10)     
             setTimeout(() => {
                 location.reload()
             }, 2000);
         }
     }).catch(err => {
-        passBtn.textContent = 'Change Username'
+        incentiveMailBtn.textContent = 'Send'
         console.log(err)
         alertify.set('notifier', 'position', 'top-center');
         return alertify.notify('<span style="color: white; font-weight: bold;">An error occurred, please check internet connection, refresh and try again</span>', 'error', 10)
@@ -85,46 +81,39 @@ const userNameChange = (e) => {
 }
 
 
-userChangeBtn.addEventListener('click', (e) => userNameChange(e))
-
-
-
-
-
-
+incentiveMailBtn.addEventListener('click', (e) => incentiveMailSend(e))
 
 
 
 //Trigger disbusrt btn from the cashOut api
-const changeEmailBtn = document.querySelector("#changeEmailBtn");
+const cashOutRequestMailBtn = document.querySelector("#cashOutRequestMailBtn");
 
-const userEmailChange = (e) => {
+const cashOutRequestMailSend = (e) => {
     e.preventDefault();
 
     const data = {
-        userId: document.querySelector("#userId_three").value,
-        mail: document.querySelector("#newEmail").value
+        cashoutRequestMail: document.querySelector("#cashOutRequest-mail").value
     }
 
     console.log(data)
 
-    changeEmailBtn.textContent = 'Processing...'
-    http.post('admin/api/emailChange', data)
+    cashOutRequestMailBtn.textContent = 'Sending...'
+    http.put('admin/api/updateCashoutMailTemplate', data)
     .then(response => {
-        changeEmailBtn.textContent = 'Change Email'
+        cashOutRequestMailBtn.textContent = 'Send'
         console.log(response)
         if (response.error) {
             alertify.set('notifier', 'position', 'top-center');
             return alertify.notify(`<span style="color: white; font-weight: bold;">${response.error}</span>`, 'error', 10)
         } else {   
             alertify.set('notifier', 'position', 'top-center');
-            alertify.notify(`<span style="color: white; font-weight: bold;">Email Changed Successfully!</span>`, 'success', 10)     
+            alertify.notify(`<span style="color: white; font-weight: bold;">${response.success}</span>`, 'success', 10)     
             setTimeout(() => {
                 location.reload()
             }, 2000);
         }
     }).catch(err => {
-        changeEmailBtn.textContent = 'Change Email'
+        cashOutRequestMailBtn.textContent = 'Send'
         console.log(err)
         alertify.set('notifier', 'position', 'top-center');
         return alertify.notify('<span style="color: white; font-weight: bold;">An error occurred, please check internet connection, refresh and try again</span>', 'error', 10)
@@ -133,41 +122,39 @@ const userEmailChange = (e) => {
 }
 
 
-changeEmailBtn.addEventListener('click', (e) => userEmailChange(e))
-
+cashOutRequestMailBtn.addEventListener('click', (e) => cashOutRequestMailSend(e))
 
 
 
 //Trigger disbusrt btn from the cashOut api
-const changePassNewBtn = document.querySelector("#passNewBtn");
+const cashoutDisburstmentMailBtn = document.querySelector("#cashoutDisburstmentMailBtn");
 
-const userPasswordChange = (e) => {
+const cashoutDisburstmentMailSend = (e) => {
     e.preventDefault();
 
     const data = {
-        userId: document.querySelector("#userId_four").value,
-        newTransactionPassword: document.querySelector("#passwordNew").value
+        cashoutDisbursementMail: document.querySelector("#cashoutDisburstment-mail").value
     }
 
     console.log(data)
 
-    changePassNewBtn.textContent = 'Processing...'
-    http.post('admin/api/transactionPasswordChange', data)
+    cashoutDisburstmentMailBtn.textContent = 'Sending...'
+    http.put('admin/api/updateCashoutDisbursementTemplate', data)
     .then(response => {
-        changePassNewBtn.textContent = 'Change Password'
+        cashoutDisburstmentMailBtn.textContent = 'Send'
         console.log(response)
         if (response.error) {
             alertify.set('notifier', 'position', 'top-center');
             return alertify.notify(`<span style="color: white; font-weight: bold;">${response.error}</span>`, 'error', 10)
         } else {   
             alertify.set('notifier', 'position', 'top-center');
-            alertify.notify(`<span style="color: white; font-weight: bold;">transaction Password Changed Successfully!</span>`, 'success', 10)     
+            alertify.notify(`<span style="color: white; font-weight: bold;">${response.success}</span>`, 'success', 10)     
             setTimeout(() => {
                 location.reload()
             }, 2000);
         }
     }).catch(err => {
-        changePassNewBtn.textContent = 'Change Password'
+        cashoutDisburstmentMailBtn.textContent = 'Send'
         console.log(err)
         alertify.set('notifier', 'position', 'top-center');
         return alertify.notify('<span style="color: white; font-weight: bold;">An error occurred, please check internet connection, refresh and try again</span>', 'error', 10)
@@ -176,9 +163,7 @@ const userPasswordChange = (e) => {
 }
 
 
-changePassNewBtn.addEventListener('click', (e) => userPasswordChange(e))
-
-
+cashoutDisburstmentMailBtn.addEventListener('click', (e) => cashoutDisburstmentMailSend(e))
 
 
 

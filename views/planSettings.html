@@ -44,20 +44,15 @@
                                                 <div class="review-content-section">
                                                     <div class="demo-container">
                                                         <div class="card-wrapper"></div>
-                                                        <form class="payment-form mg-t-30 form-border-input-show text-white-label ">
-                                                      
-                                                            <div class="form-group">
-                                                                <label for="email">Current Referral Bonus</label>
-                                                                <input name="cvc" type="text" class="form-control" placeholder="">
-                                                            </div>
+
                                                             <div class="form-group">
                                                                 <label for="email">New Referral Bonus</label>
-                                                                <input name="name" type="text" class="form-control" placeholder="">
+                                                                <input id="newReferral" name="name" type="text" class="form-control" placeholder="">
                                                             </div>
                                                         
                                                             <div class="text-center credit-card-custom office-pad-bottom">
                                                                 <!--      <a href="#!" class="btn bg-btn-cl waves-effect waves-light btn-primary">Submit</a> -->
-                                                                <button type="button" class="btn btn-success btn-block ">Update</button>
+                                                                <button id="compensationBtn" type="button" class="btn btn-success btn-block ">Update</button>
                                                             </div>
                                                         </form>
                                                     </div>
@@ -77,28 +72,28 @@
                                                         <form class="payment-form mg-t-30 form-border-input-show text-white-label ">
                                                       
                                                             <div class="form-group">
-                                                                <label for="email">Username</label>
-                                                                <input name="cvc" type="text" class="form-control" placeholder="">
+                                                                <label for="email">User Id</label>
+                                                                <input id="payoutSetUserId" name="cvc" type="text" class="form-control" placeholder="">
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="email">Amount</label>
-                                                                <input name="name" type="text" class="form-control" placeholder="">
+                                                                <input id="payoutSetAmount" name="name" type="text" class="form-control" placeholder="">
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="email">Reason</label>
                                                               
-                                                                    <textarea class="form-control" type='text'
+                                                                    <textarea id="payoutSetReason" class="form-control" type='text'
                                                                     ></textarea>
                                                             </div>
                                                             <div class="text-center credit-card-custom office-pad-bottom">
                                                                 <!--      <a href="#!" class="btn bg-btn-cl waves-effect waves-light btn-primary">Submit</a> -->
-                                                                <button type="button" class="btn btn-success btn-block ">Update</button>
+                                                                <button id="payoutSetBtn" type="button" class="btn btn-success btn-block ">Update</button>
                                                             </div>
                                                         </form>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 demo-container">
+                                            <!-- <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 demo-container">
                                                 <div class="" style="padding-top: 50px;padding-bottom:5px;">
                                                     <label class="font-white" style="padding-right:20px">Sunday</label>
                                                     <label class="switch" >
@@ -153,7 +148,7 @@
                                          
                                            
                                                
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                     <div class="product-tab-list tab-pane fade smallPagesMinHeight" id="INFORMATION">

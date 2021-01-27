@@ -35,26 +35,26 @@
                                                       
                                                             <div class="form-group">
                                                                 <label for="email">Company Name</label>
-                                                                <input name="cvc" type="text" class="form-control" placeholder="">
+                                                                <input id="company-name" name="cvc" type="text" class="form-control" placeholder="" required>
                                                             </div>
 
                                                             <div class="form-group">
                                                                 <label for="email">Company Email</label>
-                                                                <input name="name" type="text" class="form-control" placeholder="">
+                                                                <input id="company-email" name="name" type="text" class="form-control" placeholder="" required>
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="email">Company Phone</label>
-                                                                <input name="name" type="text" class="form-control" placeholder="">
+                                                                <input id="company-phone" name="name" type="text" class="form-control" placeholder="" required>
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="email">Address</label>
                                                               
-                                                                    <textarea class="form-control" type='text'
+                                                                    <textarea id="company-address" class="form-control" type='text'
                                                                     ></textarea>
                                                             </div>
                                                             <div class="text-center credit-card-custom office-pad-bottom">
                                                                 <!--      <a href="#!" class="btn bg-btn-cl waves-effect waves-light btn-primary">Submit</a> -->
-                                                                <button type="button" class="btn btn-success btn-block ">Update</button>
+                                                                <button id="generalBtn" type="button" class="btn btn-success btn-block ">Update</button>
                                                             </div>
                                                         </form>
                                                     </div>
@@ -70,14 +70,13 @@
                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center">
                                                 <div class="review-content-section">
                                                     <div>
-                                                        <img class="userSelfie" id="viewSelfie" style="width: 30%;"  class="editUserSelfie img-circle" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Placeholder_no_text.svg/768px-Placeholder_no_text.svg.png" alt="" />
+                                                        <img id="imgPreview" class="userSelfie" id="viewSelfie" style="width: 30%;"  class="editUserSelfie img-circle" src="https://www.csklegal.com/wp-content/uploads/2014/07/no-image.png" alt="" />
                                                     </div>
                                                     <label>Upload Company Logo</label>
                                               
                                                       <div class="text-center custom-pro-edt-ds office-pad-bottom">
                                                       <input id="uploadSelfieInput" type="file" class="form-control"/>
-                                                      <button type="button" class="btn btn-success btn-block ">Update</button>
-                                                
+                                                      <button id="uploadLogoBtn" type="button" class="btn btn-success btn-block ">Update</button>
                                                 </div>
                                             
                                                 </div>
