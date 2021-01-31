@@ -24,9 +24,9 @@
                                           
                                             </div>
                                             <form role="search" class="">
-                                                <input type="text" placeholder="Search By Username" class="form-control">
-                                                
-                                                
+                                                <input id="username" type="text" placeholder="Search By Username" class="form-control">
+                                                <button id="usernameBtn" style="width:100%; height: 35px; margin-top:10px;
+                                                 background: #03A9F4; color: white; font-size: 15px; border-radius:5px;">Search</button>
                                             </form>
                                         </div>
                                 
@@ -67,36 +67,20 @@
                                                 <div class="product-status-wrap border-pdt-ct table-responsive">                                  
                                                         <table style="width:100%" class="table table-borderless ">
                                                             <tr>
-                                                                <th>#</th>
-                                                                <!-- <th>Image</th> -->
                                                                 <th>UserId</th>
                                                                 <th>Name</th>
+                                                                <th>Phone</th>
                                                                 <th>Total Earned</th>
-                                                                <th>Total Spent</th>
-                                                                <th>Total Balance</th>
-                                                                <th>Date</th>
-                                                      
-                                                               
+                                                                <th>Total Invested</th>
                                                             </tr>
-                                                            <tbody id="CashOutRequestDom">
+                                                            <tbody id="userEarningDom">
                                                                 <tr> 
-                                                                   <td style="text-align: center; position: absolute; left: 35%;"> 
-                                                                        Fetching User Earnings Please wait ...
+                                                                   <td style="text-align: center; position: absolute; left: 30%;"> 
+                                                                        Please type a username above to search user earning..
                                                                     </td>
                                                                 </tr>
                                                             </tbody>
                                                         </table>
-                                                        <div id="pagination" class="custom-pagination">
-                                                            <ul class="pagination" style="float: right;">
-                                                                <li id="prev-page" class="page-item"><a class="page-link" id="prev-page-a" style="border: 1px solid tomato; cursor: pointer;">Prev</a></li>
-                                                                <!-- <li data-tab="tab-1" class="page-item"><a class="page-link" id="tab-1">1</a></li>
-                                                                <li data-tab="tab-2" class="page-item"><a class="page-link" id="tab-2">2</a></li>
-                                                                <li data-tab="tab-3" class="page-item"><a class="page-link" id="tab-3">3</a></li> -->
-                                                                <li id="next-page" class="page-item"><a class="page-link" id="next-page-a" style="border: 1px solid lightgreen; border-left: 0px; cursor: pointer;">
-                                                                   Next
-                                                                </a></li>
-                                                            </ul>
-                                                        </div>
                                                 </div>
                                             </div>
                                         </div>

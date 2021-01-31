@@ -57,20 +57,19 @@
                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center">
                                                     
                                                     <div class="review-content-section">
-                                                        <img class="kycImage" id="kycImage" style="width: 30%;" class="editUserSelfie" src="img/notification/file.png" alt="camera" /><br>
+                                                        <img id="imgPreviewDoc" class="kycImage" id="kycImage" style="width: 30%;" class="editUserSelfie" src="img/notification/file.png" alt="camera" /><br>
                                                    
-                                               
                                                         <div class="form-group">
                                                       
-                                                            <input name="cvc" type="text" class="form-control" placeholder="document name">
+                                                            <input id="titleDoc" name="titleDoc" type="text" class="form-control" placeholder="Document Name">
                                                         </div>
                                                      
                                                           <div class="text-center custom-pro-edt-ds office-pad-bottom">
-                                                          <input id="uploadKycInput" type="file" class="form-control"/>
+                                                          <input id="uploadSelfieInputDoc" type="file" class="form-control"/>
                                                     </div>
                                                     </div>
                                                     <div class="text-center custom-pro-edt-ds bottom-pad-button">
-                                                        <button type="button" class="btn btn-ctl-bt waves-effect waves-light m-r-10 bg-green" >Upload Document
+                                                        <button id="addBtnDoc" type="button" class="btn addBtnDoc btn-ctl-bt waves-effect waves-light m-r-10 bg-green" >Upload 
                                                             </button>
                                                     </div>
                                                 </div>
@@ -78,20 +77,20 @@
                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center">
                                                
                                                     <div class="review-content-section">
-                                                        <img class="kycImage" id="kycImage" style="width: 30%;" class="editUserSelfie" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Placeholder_no_text.svg/768px-Placeholder_no_text.svg.png" alt="camera" /><br>
+                                                        <img id="imgPreviewUser" class="kycImage" id="kycImage imgPreviewDoc" style="width: 30%;" class="editUserSelfie" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Placeholder_no_text.svg/768px-Placeholder_no_text.svg.png" alt="camera" /><br>
                                                    
                                                
                                                         <div class="form-group">
                                                       
-                                                            <input name="cvc" type="text" class="form-control" placeholder="image name">
+                                                            <input id="titleUser" name="cvc" type="text" class="form-control" placeholder="image name">
                                                         </div>
                                                      
                                                           <div class="text-center custom-pro-edt-ds office-pad-bottom">
-                                                          <input id="uploadKycInput" type="file" class="form-control"/>
+                                                          <input id="uploadSelfieInputUser" type="file" class="form-control"/>
                                                     </div>
                                                     </div>
                                                     <div class="text-center custom-pro-edt-ds bottom-pad-button">
-                                                        <button type="button" class="btn btn-ctl-bt waves-effect waves-light m-r-10 bg-green" >Upload Image
+                                                        <button id="addBtnDoc" type="button" class="btn addBtnDoc btn-ctl-bt waves-effect waves-light m-r-10 bg-green" >Upload   
                                                             </button>
                                                     </div>
                                                 </div>
@@ -130,7 +129,7 @@
                                   
                                 </form>
                             </div>
-                            <table>
+                            <table id="dom-input-doc">
                                 <tr>
                                     <th>#</th>
                                     <th>Title</th>
@@ -140,32 +139,23 @@
                                     <th>View</th>
                                     <th>Operations</th>
                                 </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Product Title 1</td>
-                                    <td>
-                                     <p>  info.pdf</p>
-                                    </td>
-                                    <td>500kb</td>
-                                    <td>15/07/2020</td>
-                                    <td><img src="img/new-product/5-small.jpg" alt="" /></td>
-                                  
-                                    <td>
-                                        <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                        <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                                    </td>
-                                </tr>
                           
+                                    <tr>
+                                        <td>1</td>
+                                            <td>Product Title 1</td>
+                                            <td>
+                                            <p>  info.pdf</p>
+                                            </td>
+                                            <td>500kb</td>
+                                            <td>15/07/2020</td>
+                                            <td><img src="img/new-product/5-small.jpg" alt="" /></td>
+                                        
+                                            <td>
+                                                <button data-del="${x._id}" data-toggle="tooltip" title="Trash" class="pd-setting-ed delCartSel"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                            </td>
+                                    </tr>
+                                
                             </table>
-                            <div class="custom-pagination">
-								<ul class="pagination">
-									<li class="page-item"><a class="page-link" href="#">Previous</a></li>
-									<li class="page-item"><a class="page-link" href="#">1</a></li>
-									<li class="page-item"><a class="page-link" href="#">2</a></li>
-									<li class="page-item"><a class="page-link" href="#">3</a></li>
-									<li class="page-item"><a class="page-link" href="#">Next</a></li>
-								</ul>
-                            </div>
                         </div>
                     </div>
                 </div>

@@ -6,7 +6,7 @@ let http = new EasyHTTP;
 const getAdmin = JSON.parse(localStorage.getItem('@pfxnet-admin-token')) || false;
 
 if(getAdmin === false && window.location.pathname !== '/') {
-    // location.replace(`http://localhost:8003`);
+    //location.replace(`http://localhost:8003`);
     // location.replace(`https://pfxnet-admin.herokuapp.com`);
     location.replace(`https://admin.pfxnet.com`);
 }
