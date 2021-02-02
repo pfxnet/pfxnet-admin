@@ -8,6 +8,7 @@
  */
 //const api_origin = 'https://pfxnet-api.herokuapp.com/';
 const api_origin = 'https://api.pfxnet.com/'; 
+// api_origin = 'http://localhost:9000/'
 console.log(api_origin)
 
 class EasyHTTP{
