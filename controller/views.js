@@ -252,11 +252,11 @@ exports.userEarnings =(req,res)=>{
         userEarnings:true,
     })
 }
+//messageList,viewMessage,composeMessage
+exports.messageList =(req,res)=>{res.render('messageList',{title:'Message List: Pfxnet',description:'',messageList:true, })}
+exports.viewMessage =(req,res)=>{res.render('viewMessage',{title:'viewMessage: Pfxnet',description:'',viewMessage:true, })}
 
-exports.inbox =(req,res)=>{res.render('inbox',{title:'Inbox: Pfxnet',description:'',inbox:true, })}
-exports.viewMail =(req,res)=>{res.render('viewMail',{title:'viewMail: Pfxnet',description:'',viewMail:true, })}
-
-exports.composeMail =(req,res)=>{res.render('composeMail',{title:'composeMail: Pfxnet',description:'',composeMail:true, })}
+exports.composeMessage =(req,res)=>{res.render('composeMessage',{title:'composeMessage: Pfxnet',description:'',composeMessage:true, })}
 
 exports.notifications =(req,res)=>{res.render('notifications',{title:'Notifications: Pfxnet',description:'',notifications:true, })}
 
