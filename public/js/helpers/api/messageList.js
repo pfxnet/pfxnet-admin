@@ -14,7 +14,6 @@
     let tab3 = 0;
 
 
-
     //Trigger disbusrt btn from the cashOut api
 
 const deleteApi = (e, x) => {
@@ -81,8 +80,8 @@ const deleteApi = (e, x) => {
                         const { _id, createdAt, title, content, sender  } = x;
                         //Insert in to the Dom
                         domInput.innerHTML += `
-                         <tr>
-                            <a href="">
+                       
+                            <tr>
                                 <td class="unread">
                                     <div class="checkbox">
                                         <input type="checkbox">
@@ -94,9 +93,9 @@ const deleteApi = (e, x) => {
                                 <td>${content}</td>
                                 <td><button class="btn btn-default delete btn-sm" data-id-ref="${_id}"><i class="fa fa-trash-o"></i></button></td>
                                 <td style="width: 250px">${new Date(createdAt).toDateString()}</td>
-                            </a>
-                        </tr>`
-                    })
+                                <td> <a href="/viewMessage?message_id=${_id}">View Message</a></td>
+                            </tr>`;
+                    });
 
                      const deleteAll = Array.from(document.querySelectorAll('.delete'))
 
@@ -138,7 +137,7 @@ const deleteApi = (e, x) => {
 
     document.querySelector('#searchInbox').addEventListener('keyup', (e) => {
 
-        console.log('real gem')
+        getMessageApi(`admin/api/getMessages?search=${e.target.value}`);
 
     });
 
