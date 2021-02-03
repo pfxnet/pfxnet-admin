@@ -55,35 +55,43 @@
                                 <div class="panel-heading hbuilt">
                                     <div class="p-xs">
                                         <form method="get" class="form-horizontal">
-                                            <div class="form-group">
+                                            <div class="form-group" id="userIdBox">
                                                 <label class="col-sm-1 control-label text-left">To:</label>
                                                 <div class="col-sm-11">
-                                                    <input type="text" class="form-control input-sm" placeholder="example@email.com">
+                                                    <input id="userIdToMsg" type="text" class="form-control input-sm" placeholder="Enter User Id" required>
                                                 </div>
                                             </div>
                                     
                                             <div class="form-group">
                                                 <label class="col-sm-1 control-label text-left">Subject:</label>
                                                 <div class="col-sm-11">
-                                                    <input type="text" class="form-control input-sm" placeholder="Enter Email subject">
+                                                    <input id="subjectToMsg" type="text" class="form-control input-sm" placeholder="Enter Message Subject" required>
                                                 </div>
                                             </div>
                                                     <div class="form-group">
                                                 <label class="col-sm-1 control-label text-left">Body:</label>
                                                 <div class="col-sm-11">
-                                                 <textarea class="form-control " style="height: 120px"></textarea>
+                                                 <textarea id="messageToMsg" class="form-control " style="height: 120px" required></textarea>
                                                 </div>
                                             </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-1 control-label text-left">Send To All:</label>
+                                                <div class="col-sm-11">
+                                                    <style>
+                                                        
+                                                    </style>
+                                                    <input style="width: 50px; height: 50px; "
+                                                     type="checkbox" name="" id="sendToAllCheck">
+                                                     <p style="font-weight: bold; font-size: 20px;"> Click if you want to send to all User</p>
+                                                </div>
+                                            </div>
+                                            <div class="">
+                              
+                                                <button id="sendMsgBtn" class="btn btn-success ft-compse">Send Message</button>
+               -
+                                           </div>
                                         </form>
                                     </div>
-                                </div>
-                       
-    
-                                <div class="">
-                              
-                                    <button class="btn btn-primary ft-compse">Send</button>
-                                      <button class="btn btn-success ft-compse">Send To All</button>
-    
                                 </div>
                             </div>
                         </div>

@@ -22,4 +22,6 @@ const inputForUpdate = (data) => {
     settingStateEdit.value = data.state ? data.state : '';
     settingCityEdit.value = data.city ? data.city : '';
     settingUserIDEdit.value = data.userId ? data.userId : '';
+    settingBankEdit.value = data.bankName ? data.bankName : '';
+    settingAccountNumberEdit.value = data.accountNumber ? data.accountNumber : '';
 }

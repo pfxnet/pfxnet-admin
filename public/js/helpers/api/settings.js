@@ -22,7 +22,8 @@ const settingCountryEdit = document.querySelector("#settingCountryEdit")
 const settingStateEdit = document.querySelector("#settingStateEdit")
 const settingCityEdit = document.querySelector("#settingCityEdit")
 const settingUserIDEdit = document.querySelector("#settingUserIDEdit")
-
+const settingBankEdit = document.querySelector("#settingBankEdit")
+const settingAccountNumberEdit = document.querySelector("#settingAccountNumberEdit")
 
 const findToEditUser = (e) => {
     e.preventDefault();

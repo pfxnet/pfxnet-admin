@@ -23,11 +23,7 @@
                                                     <h2>Message List</h2>
                                           
                                             </div>
-                                            <form role="search" class="">
-                                                <input type="text" placeholder="Search By Username" class="form-control">
-                                                
-                                                
-                                            </form>
+                                 
                                         </div>
                                 
                               
@@ -85,8 +81,8 @@
                                 <div class="panel-heading hbuilt mailbox-hd">
                                     <div class="text-center p-xs font-normal">
                                         <div class="input-group">
-                                            <input type="text" class="form-control input-sm" placeholder="Search email in your inbox..."> <span class="input-group-btn"> <button type="button" class="btn btn-sm btn-default">Search
-                                                </button> </span></div>
+                                            <input id="searchInbox" type="text" class="form-control input-sm" placeholder="Search inbox..."> <span class="input-group-btn">
+                                         </span></div>
                                     </div>
                                 </div>
                                 <div class="panel-body">
@@ -101,46 +97,22 @@
                                                 <button class="btn btn-default btn-sm"><i class="fa fa-tag"></i></button>
                                             </div> -->
                                         </div>
-                                        <div class="col-md-6 col-md-6 col-sm-6 col-xs-12 mailbox-pagination mg-b-15">
+                                        <style>
+                                            .custom-pagination {
+                                                display: 'none';
+                                            }
+                                        </style>
+                                        <div id="pagination" class="col-md-6 custom-pagination col-md-6 col-sm-6 col-xs-12 mailbox-pagination mg-b-15">
                                             <div class="btn-group">
-                                                <button class="btn btn-default btn-sm"><i class="fa fa-arrow-left"></i></button>
-                                                <button class="btn btn-default btn-sm"><i class="fa fa-arrow-right"></i></button>
+                                                <button id="prev-page" class="btn btn-default btn-sm"><i class="fa fa-arrow-left"></i></button>
+                                                <button id="next-page" class="btn btn-default btn-sm"><i class="fa fa-arrow-right"></i></button>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="table-responsive">
                                         <table class="table table-hover table-mailbox">
-                                            <tbody>
-                                           <tr>
-                                                    <td class="unread">
-                                                        <div class="checkbox">
-                                                            <input type="checkbox">
-                                                            <label></label>
-                                                        </div>
-                                                    </td>
-                                                    <td><a href="#">Brent Rasmussen</a></td>
-                                                    <td><a href="#">Nam nec turpis sed quam tristique sodales.</a></td>
-                                                    <td><button class="btn btn-default btn-sm"><i class="fa fa-trash-o"></i></button></td>
-                                                    <td class="text-right mail-date">Sun, Nov 15</td>
-                                                </tr>
-                                                           <tr>
-                                                    <td class="unread">
-                                                        <div class="checkbox">
-                                                            <input type="checkbox">
-                                                            <label></label>
-                                                        </div>
-                                                    </td>
-                                                    <td><a href="#">Brent Rasmussen</a></td>
-                                                    <td><a href="#">Nam nec turpis sed quam tristique sodales.</a></td>
-                                                    <td><button class="btn btn-default btn-sm"><i class="fa fa-trash-o"></i></button></td>
-                                                    <td class="text-right mail-date">Sun, Nov 15</td>
-                                                </tr>
-                                      
-                                         
-                                         
-                                          
-                                             
-                                            
+                                            <tbody id="messageDom">
+
                                             </tbody>
                                         </table>
                                     </div>

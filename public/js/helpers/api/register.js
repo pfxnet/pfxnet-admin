@@ -37,8 +37,11 @@ const registerNewMemeber = (e) => {
       console.log(response)
          adminRegMemberBtn.innerHTML = `Register User`
         if(!response.success){
-          alertify.set('notifier','position', 'top-center');
-          return alertify.notify(`<p style="color: white;">${response}</p>`, 'error', 10) 
+            alertify.set('notifier','position', 'top-center');
+            alertify.notify(`<p style="color: white;">${response}</p>`, 'error', 10) 
+             setTimeout(() => {
+                location.reload()
+            }, 2000);
         }
         alertify.set('notifier', 'position', 'top-center');
         alertify.notify(`<span style="color: white; font-weight: bold;">User registration done successfully!</span>`, 'success', 10)     
