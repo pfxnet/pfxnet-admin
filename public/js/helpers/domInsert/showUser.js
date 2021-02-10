@@ -9,6 +9,7 @@ const displayUserData = (data) => {
     settingPhoneShow.textContent = data != 'Empty Search..' ? data.phone : '----';
     settingJoined.textContent = data != 'Empty Search..' ? data.createdAt : '----';
     settingReferralLink.value   = data != 'Empty Search..' ? data.link : '';
+    settingReferralPackage.textContent = data != 'Empty Search..' ? data.packageActivated : '';
 }
 
 const inputForUpdate = (data) => {

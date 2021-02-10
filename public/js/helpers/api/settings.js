@@ -8,7 +8,7 @@ const settingNameShow = document.querySelector("#settingNameShow")
 const settingEmailShow = document.querySelector("#settingEmailShow")
 const settingPhoneShow = document.querySelector("#settingPhoneShow")
 const settingJoined = document.querySelector("#settingJoined")
-const settingReferralTitle = document.querySelector("#settingReferralTitle")
+const settingReferralPackage = document.querySelector("#settingReferralPackage")
 const settingReferralLink = document.querySelector("#settingReferralLink")
 
 //Edit Query 

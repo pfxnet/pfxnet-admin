@@ -15,7 +15,7 @@ const insertCountToDOM = (data) => {
     totalRevenueReceived.textContent = data.totalRevenueReceived;
     totalCashPayout.textContent = data.totalCashPayout;
     affiliateCashoutRequest.textContent = data.affiliateCashoutRequest;
-    commisionPayout.textContent = data.affiliateCashoutRequest;
+    commisionPayout.textContent = data.commisionPayout;
     totalUpgradeWallet.textContent = data.totalUpgradeWallet;
     totalIncentiveWallet.textContent = data.totalIncentiveWallet;
     totalLandPurchaseWallet.textContent = data.totalLandPurchaseWallet;
