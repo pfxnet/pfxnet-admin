@@ -31,7 +31,7 @@ const treeDownliner = (e) => {
                 downlinerBlock.innerHTML += `
                 <td style="text-align: center; margin-top: 15px;">
                     <img src="${x.avatar ? x.avatar : 'https://www.csklegal.com/wp-content/uploads/2014/07/no-image.png'}" class="img-fluid img-rounded" alt="" />
-                    <p style="color: white; text-align: center;">
+                    <p style="color: white;">
                         ${x.firstname} ${x.lastname}<br>
                         ${x.mail}<br>
                         ${x.phone}
