@@ -87,16 +87,15 @@ console.log('hello')
     next.addEventListener('click', (e) => {
         console.log("next accepted")
         nextPayLoad = nextPayLoad + 20;
-        nextA.innerHTML = `<img style="width: 15px;" src="img/logo/preloader.gif"  alt="" />`;
+        nextA.innerHTML = `Loading...`;
         //Call the API Function
         getCashOutRequestApi(`api/getCashOutRequests?perPage=20&jump=${nextPayLoad}`)
     })
 
     prev.addEventListener('click', (e) => {
-        console.log(nextPayLoad)
         if(nextPayLoad > 0) {
             nextPayLoad = nextPayLoad - 20;
-            prevA.innerHTML = `<img style="width: 15px;" src="img/logo/preloader.gif"  alt="" />`;
+            prevA.innerHTML = `Loading...`;
             getCashOutRequestApi(`api/getCashOutRequests?perPage=20&jump=${nextPayLoad}`)
         }
     })

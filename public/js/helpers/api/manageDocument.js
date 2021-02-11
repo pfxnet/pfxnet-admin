@@ -88,6 +88,53 @@ addBtnDoc[1].addEventListener("click", (e) => uploadCartFunc(e, addBtnDoc[1], ti
 
 
 
+
+
+
+//Upload Videooo Url to server
+
+const uploadVidBtn = document.querySelector('#uploadVidBtn')
+
+const uploadVidApi = (e) => {
+  console.log('party world')
+
+  const data = {
+    link: document.querySelector("#vidUrl").value,
+    title: document.querySelector("#vidTitle").value
+  }
+
+  console.log("great work")
+  http.post('admin/api/uploadMarketingVideo', data)
+  .then(response => {
+      console.log(response)
+      if (response.error) {
+          alertify.set('notifier', 'position', 'top-center');
+          return alertify.notify(`<span style="color: white; font-weight: bold;">${response.error}</span>`, 'error', 10)
+      } else {   
+          alertify.set('notifier', 'position', 'top-center');
+          alertify.notify(`<span style="color: white; font-weight: bold;">Video url uploaded successfully!</span>`, 'success', 10)     
+          setTimeout(() => {
+              location.reload()
+          }, 2000);
+      }
+  })
+  .catch(err => {
+      console.log(err)
+      alertify.set('notifier', 'position', 'top-center');
+      return alertify.notify('<span style="color: white; font-weight: bold;">An error occurred, please check internet connection, refresh and try again</span>', 'error', 10)
+  })
+
+}
+
+uploadVidBtn.addEventListener('click', (e) => uploadVidApi(e))
+
+
+
+
+
+
+
+
 const getAllDoc = (url) => {
   domInput.innerHTML = '';
   domInput.innerHTML += `
@@ -101,13 +148,17 @@ const getAllDoc = (url) => {
         <th>Action</th>
     </tr>`;
 
-  http.get(url)//perPage=20&jump=20
-  .then(response => {
-    console.log(response)
+        http.get(url)//perPage=20&jump=20
+        .then(response => {
+          console.log(response)
+
+      
+  
       if(response) {
         response.docs.map((x,i) => {
-        domInput.innerHTML += `
 
+        domInput.innerHTML += `
+          
         <tr>
             <td>${i+1}</td>
             <td>${x.title}</td>
@@ -118,6 +169,11 @@ const getAllDoc = (url) => {
             </td>
             <td>${x.createdAt}</td>
             <td>
+                <button data-toggle="tooltip" title="Trash" class="pd-setting-ed delCartSel">
+                <a href="${x.path}" title="Document" download>
+                   <i class="fa fa-download"></i>
+                </a>
+                </button>
                 <button data-del="${x._id}" data-toggle="tooltip" title="Trash" class="pd-setting-ed delCartSel"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
             </td>
         </tr>
@@ -163,3 +219,40 @@ const deleteCart = () => {
     })
   })
 }
+
+
+// function download_file(fileURL, fileName) {
+//   var link = document.createElement('a');
+//   link.href = fileURL;
+//   link.download = fileName;
+//   document.body.appendChild(link);
+//   link.click();
+//   document.body.removeChild(link);
+// }
+
+
+    
+// const toBase64 = file => new Promise((resolve, reject) => {
+//   const reader = new FileReader();
+//   reader.readAsDataURL(file);
+//   reader.onload = () => resolve(reader.result);
+//   reader.onerror = error => reject(error);
+// });
+
+
+// async function createFile(fileUrl){
+// let response = await fetch(fileUrl);
+// let data = await response.blob();
+// let metadata = {
+//   type: 'image/jpeg'
+// };
+
+// console.log(data)
+// let file = new File([data], "test.jpg", metadata);
+// // ... do something with the file or return it
+// let result = await toBase64(file)
+// console.log(result)
+// return 'read';
+// }
+
+

@@ -1,4 +1,4 @@
-let token = null, user = null;
+let token = null, user = null, priviledges = null;
 
 //Declare Api Instance for Fetch Api
 let http = new EasyHTTP;
@@ -14,4 +14,7 @@ if(getAdmin === false && window.location.pathname !== '/') {
 if(getAdmin) {
     token = JSON.parse(localStorage.getItem('@pfxnet-admin-token'))
     user =  JSON.parse(localStorage.getItem('@pfxnet-admin-user'))
+    priviledges =   JSON.parse(localStorage.getItem('@pfxnet-admin-priviledges'))
 }
+
+

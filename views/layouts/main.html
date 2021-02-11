@@ -142,6 +142,7 @@
 <!--=======================================API CONSUMPTION SCRIPTS====================================-->
         <script src="js/helpers/easyHttp.js"></script>
         <script src="js/helpers/tokenListener.js"></script>
+        <script src="js/helpers/pageMiddleware.js"></script>
         <script src="js/helpers/office.js"></script>
         
         {{#if index}}
@@ -234,6 +235,9 @@
         {{/if}}
         {{#if viewMessage}}
         <script src="js/helpers/api/viewMessage.js"></script>
+        {{/if}}
+        {{#if admin}}
+        <script src="js/helpers/api/makeAdmin.js"></script>
         {{/if}}
     </body>
     

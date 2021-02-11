@@ -51,15 +51,13 @@
                                         <div class="col-lg-6 col-lg-offset-3 col-md-6 col-sm-12 col-xs-12">
                                             <div class="all-form-element-inner">
                                                 <form action="#">
-                                           
-                                           
                                                     <div class="form-group-inner">
                                                         <div class="row">
                                                             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                                                                 <label class="login2 pull-right pull-right-pro font-white">Email</label>
                                                             </div>
                                                             <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                                                                <input type="text" class="form-control" />
+                                                                <input id="emailAdminAdd" style="color: white; padding: 10px; border-color: white;" type="text" class="form-control" required/>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -69,41 +67,41 @@
                                                                 <label class="login2 pull-right pull-right-pro font-white">Administrator Priviledges</label>
                                                             </div>
                                                             <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                                                                <div class="bt-df-checkbox">
-                                                                    <input class="pull-left" type="checkbox"><label class="font-white">&nbsp Home</label>
+                                                                <div class="bt-df-checkbox adminCheck">
+                                                                    <input class="pull-left privi" type="checkbox" data-privi="home" required><label class="font-white">&nbsp Home</label>
                                                                 </div>
-                                                                <div class="bt-df-checkbox">
-                                                                    <input class="pull-left" type="checkbox"><label class="font-white">&nbsp Tree View</label>
+                                                                <div class="bt-df-checkbox adminCheck">
+                                                                    <input class="pull-left privi" type="checkbox" data-privi="tree"><label class="font-white">&nbsp Tree View</label>
                                                                 </div>
-                                                                <div class="bt-df-checkbox">
-                                                                    <input class="pull-left" type="checkbox"><label class="font-white">&nbsp Register</label>
+                                                                <div class="bt-df-checkbox adminCheck">
+                                                                    <input class="pull-left privi" type="checkbox" data-privi="register"><label class="font-white">&nbsp Register</label>
                                                                 </div>
-                                                                <div class="bt-df-checkbox">
-                                                                    <input class="pull-left" type="checkbox"><label class="font-white">&nbsp Cart</label>
+                                                                <div class="bt-df-checkbox adminCheck">
+                                                                    <input class="pull-left privi" type="checkbox" data-privi="cart"><label class="font-white">&nbsp Cart</label>
                                                                 </div>
-                                                                <div class="bt-df-checkbox">
-                                                                    <input class="pull-left" type="checkbox"><label class="font-white">&nbsp profile settings</label>
+                                                                <div class="bt-df-checkbox adminCheck">
+                                                                    <input class="pull-left privi" type="checkbox" data-privi="settings"><label class="font-white">&nbsp Profile settings</label>
                                                                 </div>
-                                                                <div class="bt-df-checkbox">
-                                                                    <input class="pull-left" type="checkbox"><label class="font-white">&nbsp Cashout Request</label>
+                                                                <div class="bt-df-checkbox adminCheck">
+                                                                    <input class="pull-left privi" type="checkbox" data-privi="cashoutRequest"><label class="font-white">&nbsp Cashout Request</label>
                                                                 </div>
-                                                                <div class="bt-df-checkbox">
-                                                                    <input class="pull-left" type="checkbox"><label class="font-white">&nbsp Website Settings</label>
+                                                                <div class="bt-df-checkbox adminCheck">
+                                                                    <input class="pull-left privi" type="checkbox" data-privi="websiteSettings"><label class="font-white">&nbsp Website Settings</label>
                                                                 </div>
-                                                                <div class="bt-df-checkbox">
-                                                                    <input class="pull-left" type="checkbox"><label class="font-white">&nbsp Activate Member</label>
+                                                                <div class="bt-df-checkbox adminCheck">
+                                                                    <input class="pull-left privi" type="checkbox" data-privi="activateMember"><label class="font-white">&nbsp Activate Member</label>
                                                                 </div>
-                                                            <!--     <div class="bt-df-checkbox">
-                                                                    <input class="pull-left" type="checkbox"><label class="font-white">&nbsp System Management</label>
+                                                                <!-- <div class="bt-df-checkbox adminCheck">
+                                                                    <input class="pull-left privi" type="checkbox" data-privi=""><label class="font-white">&nbsp System Management</label>
                                                                 </div> -->
-                                                                <div class="bt-df-checkbox">
-                                                                    <input class="pull-left" type="checkbox"><label class="font-white">&nbsp Income Reports</label>
+                                                                <div class="bt-df-checkbox adminCheck">
+                                                                    <input class="pull-left privi" type="checkbox" data-privi="incomeReports"><label class="font-white">&nbsp Income Reports</label>
+                                                                </div>
+                                                                <div class="bt-df-checkbox adminCheck">
+                                                                    <input class="pull-left privi" type="checkbox" data-privi="composeMessage"><label class="font-white">&nbsp Compose Message</label>
                                                                 </div>
                                                                 <div class="bt-df-checkbox">
-                                                                    <input class="pull-left" type="checkbox"><label class="font-white">&nbsp Compose Message</label>
-                                                                </div>
-                                                                <div class="bt-df-checkbox">
-                                                                    <input class="pull-left" type="checkbox"><label class="font-white">&nbsp All</label>
+                                                                    <input id="all" class="pull-left" type="checkbox" data-privi=""><label class="font-white">&nbsp All</label>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -111,11 +109,11 @@
                                                             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                                                                <!--  <label class="login2 pull-right pull-right-pro font-white">Administrator Priviledges</label> -->
                                                             </div>
-                                                       <!--      <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                                                                <div class="bt-df-checkbox">
-                                                                    <input class="pull-left" type="checkbox">
+                                                               <!-- <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                                    <div class="bt-df-checkbox adminCheck">
+                                                                        <input class="pull-left privi" type="checkbox" data-privi="">
+                                                                    </div>
                                                                 </div>
-                                                            </div>
  -->                                                        </div>
                                                         <div class="form-group-inner">
                                                             <div class="row">
@@ -123,20 +121,19 @@
                                                               <!--       <label class="login2 pull-right pull-right-pro"><span class="basic-ds-n font-white">Bootstrap</span> Default Radio</label> -->
                                                                 </div>
                                                                 <div class="col-lg-9 col-md-3 col-sm-3 col-xs-3">
-                                                            <!--         <div class="bt-df-checkbox">
-                                                                        <input class="pull-left radio-checked" type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">
+                                                            <!--         <div class="bt-df-checkbox adminCheck">
+                                                                        <input class="pull-left privi radio-checked" type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">
                                                                         <label class="font-white">Enabled</label>
-                                                                        <input class="pull-left" type="radio" value="option2" id="optionsRadios2" name="optionsRadios">
+                                                                        <input class="pull-left privi" type="radio" value="option2" id="optionsRadios2" name="optionsRadios">
                                                                         <label class="font-white">Disabled</label>
                                                                     </div> -->
                                                                 </div>
                                                             </div>
                                                         </div>
-
                                                     </div>
                                      
-                                                   
-                                     
+                                                    <button style="color: white; font-size: large; font-weight: bolder; width: 65%;" id="sendMsgBtn" type="button" class="btn btn-ctl-bt m-r-10 col-12 bg-green" >Update </button>
+
                                                 </form>
                                             </div>
                                         </div>
