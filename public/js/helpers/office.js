@@ -6,8 +6,8 @@ function logOut(e) {
    e.preventDefault()
    http.get(`api/logOut`)
       .then((data) => {
-         location.replace(`http://localhost:8003`);
-         //window.location.href = "https://admin.pfxnet.com"
+         //location.replace(`http://localhost:8003`);
+         window.location.href = "https://admin.pfxnet.com"
       }).catch((err) => {
          console.log(err)
       })
