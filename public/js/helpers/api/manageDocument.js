@@ -155,7 +155,7 @@ const getAllDoc = (url) => {
       
   
       if(response) {
-        response.docs.map((x,i) => {
+        response.map((x,i) => {
 
         domInput.innerHTML += `
           
@@ -170,7 +170,7 @@ const getAllDoc = (url) => {
             <td>${x.createdAt}</td>
             <td>
                 <button data-toggle="tooltip" title="Trash" class="pd-setting-ed delCartSel">
-                <a href="${x.path}" title="Document" download>
+                <a href="${x.file}" title="Document" download>
                    <i class="fa fa-download"></i>
                 </a>
                 </button>
