@@ -20,7 +20,7 @@ const viewMessageApi = ()  => {
             //Insert in to the Dom
             document.querySelector('#subject').innerHTML = response.data.title;
             document.querySelector('#sender').innerHTML   = response.data.sender;
-            document.querySelector('#date').innerHTML   = response.data.date;
+            document.querySelector('#date').innerHTML   = response.data.createdAt;
             document.querySelector('#content').innerHTML = response.data.content;
 
             // content: "Just testing the messaging"

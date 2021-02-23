@@ -91,9 +91,9 @@ const deleteApi = (e, x) => {
                                 <td><a href="#">${sender}</a></td>
                                 <td><a href="#">${title}</a></td>
                                 <td>${content}</td>
-                                <td><button class="btn btn-default delete btn-sm" data-id-ref="${_id}"><i class="fa fa-trash-o"></i></button></td>
                                 <td style="width: 250px">${new Date(createdAt).toDateString()}</td>
                                 <td> <a href="/viewMessage?message_id=${_id}">View Message</a></td>
+                                <td><button class="btn btn-default delete btn-sm" data-id-ref="${_id}"><i class="fa fa-trash-o"></i></button></td>
                             </tr>`;
                     });
 

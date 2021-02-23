@@ -14,6 +14,7 @@ const addFundFunc = (e) => {
     const data = {
         userId, amount, reason
     }
+    console.log(data, 'leg');
 
     http.post('admin/api/addFunds',data)
         .then((response)=>{

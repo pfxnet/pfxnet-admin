@@ -15,15 +15,16 @@ const settingReferralLink = document.querySelector("#settingReferralLink")
 const settingFirstnameEdit = document.querySelector("#settingFirstnameEdit")
 const settingLastnameEdit = document.querySelector("#settingLastnameEdit")
 const settingPhoneEdit = document.querySelector("#settingPhoneEdit")
-const settingDOBEdit = document.querySelector("#settingDOBEdit")
 const settingGenderEdit = document.querySelector("#settingGenderEdit")
 const settingAddressEdit = document.querySelector("#settingAddressEdit")
 const settingCountryEdit = document.querySelector("#settingCountryEdit")
 const settingStateEdit = document.querySelector("#settingStateEdit")
 const settingCityEdit = document.querySelector("#settingCityEdit")
 const settingUserIDEdit = document.querySelector("#settingUserIDEdit")
-const settingBankEdit = document.querySelector("#settingBankEdit")
 const settingAccountNumberEdit = document.querySelector("#settingAccountNumberEdit")
+const settingAccountNameEdit = document.querySelector("#settingAccountNameEdit")
+const settingBankNameEdit = document.querySelector("#settingBankNameEdit")
+
 
 const findToEditUser = (e) => {
     e.preventDefault();

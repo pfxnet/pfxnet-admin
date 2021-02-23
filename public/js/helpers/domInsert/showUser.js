@@ -16,13 +16,13 @@ const inputForUpdate = (data) => {
     settingFirstnameEdit.value = data.firstname ? data.firstname : '';
     settingLastnameEdit.value = data.lastname ? data.lastname : '';
     settingPhoneEdit.value = data.phone ? data.phone : '';
-    settingDOBEdit.value = data.dob ? data.dob : '';
     settingGenderEdit.value = data.gender ? data.gender : '';
     settingAddressEdit.value = data.address ? data.address : '';
     settingCountryEdit.value = data.country ? data.country : '';
     settingStateEdit.value = data.state ? data.state : '';
     settingCityEdit.value = data.city ? data.city : '';
     settingUserIDEdit.value = data.userId ? data.userId : '';
-    settingBankEdit.value = data.bankName ? data.bankName : '';
     settingAccountNumberEdit.value = data.accountNumber ? data.accountNumber : '';
+    settingAccountNameEdit.value = data.accountName ? data.accountName : '';
+    settingBankNameEdit.value = data.bankName ? data.bankName : '';
 }
