@@ -10,10 +10,10 @@ function composeMsgFunc(e){
 
      const to = document.querySelector('#userIdToMsg').value;
      const subject = document.querySelector('#subjectToMsg').value
-     const message = document.querySelector('#messageToMsg').value
+     const body = document.querySelector('#messageToMsg').value
 
 
-     const data = {subject, message, to}
+     const data = {subject, body, to}
 
      http.post('admin/api/composeMessage',data)
      .then((response)=>{
