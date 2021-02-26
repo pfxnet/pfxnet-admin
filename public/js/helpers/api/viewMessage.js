@@ -22,13 +22,6 @@ const viewMessageApi = ()  => {
             document.querySelector('#sender').innerHTML   = response.data.sender;
             document.querySelector('#date').innerHTML   = response.data.createdAt;
             document.querySelector('#content').innerHTML = response.data.content;
-
-            // content: "Just testing the messaging"
-            // createdAt: "2021-02-04T01:10:16.037Z"
-            // receiver: "PFX-MAIN"
-            // sender: "PFX-490267"
-            // title: "Just Testing"
-            // updatedAt: "2021-02-04T01:10:16.037Z"
         }
 
 

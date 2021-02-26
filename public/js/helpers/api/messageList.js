@@ -16,18 +16,16 @@
 
     //Trigger disbusrt btn from the cashOut api
 
-const deleteApi = (e, x) => {
+const deleteApi = (e) => {
 
     if (!confirm("Are you sure to delete message, if yes click OK to continue or else cancle!")) {
         return false;
     } 
 
-    const id = e.target.dataset.id;
-
+    const id = e.currentTarget.dataset.idRef;
     console.log(id)
-    const data = {id};
 
-    http.delete(`ad min/api/deleteMessage/${id}`)
+    http.delete(`admin/api/deleteMessage/${id}`)
     .then(response => {
         console.log(response)
         if (response.error) {
@@ -93,15 +91,15 @@ const deleteApi = (e, x) => {
                                 <td>${content}</td>
                                 <td style="width: 250px">${new Date(createdAt).toDateString()}</td>
                                 <td> <a href="/viewMessage?message_id=${_id}">View Message</a></td>
-                                <td><button class="btn btn-default delete btn-sm" data-id-ref="${_id}"><i class="fa fa-trash-o"></i></button></td>
+                                <td><button class="btn btn-default delete btn-sm" data-id-ref="${_id}">
+                                <i class="fa fa-trash-o"></i></button></td>
                             </tr>`;
                     });
 
                      const deleteAll = Array.from(document.querySelectorAll('.delete'))
 
                     deleteAll.map(x => {
-                        console.log(x)
-                        x.addEventListener('click', (e) => deleteApi(e, x))
+                        x.addEventListener('click', (e) => deleteApi(e))
                     })
 
                     pagination.style.display = 'block';
