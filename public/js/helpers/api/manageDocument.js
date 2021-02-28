@@ -140,7 +140,7 @@ const getAllDoc = (url) => {
   domInput.innerHTML += `
     <tr>
         <th>#</th>
-        <th>Title</th>
+        <th>Owner</th>
         <th>Category</th>
         <th>Size</th>
         <th>View</th>
@@ -161,7 +161,7 @@ const getAllDoc = (url) => {
           
         <tr>
             <td>${i+1}</td>
-            <td>${x.title}</td>
+            <td>${x.owner}</td>
             <td>${x.category}</td>
             <td>${x.size}</td>
             <td>
@@ -179,10 +179,14 @@ const getAllDoc = (url) => {
         </tr>
               
            `;
+   
+        })
+
+        const getDelBtns = Array.from(document.querySelectorAll(".delCartSel"));
+        getDelBtns.map(x => { 
+          x.addEventListener('click', (e) => deleteCart(e))
         })
       }
-
-      deleteCart();
 
   }).catch(err => {
       console.log(err.message)
@@ -193,32 +197,29 @@ const getAllDoc = (url) => {
 
 getAllDoc("admin/api/getDocumentImages");
 
-const deleteCart = () => {
-  const getDelBtns = Array.from(document.querySelectorAll(".delCartSel"));
- 
-  getDelBtns.map(x => {
-    x.addEventListener('click', (e) => {
-      http.delete(`admin/api/deleteImage/${e.target.dataset.del}`)
-          .then(response => {
-              if (response.error) {
-                  alertify.set('notifier', 'position', 'top-center');
-                  return alertify.notify(`<span style="color: white; font-weight: bold;">${response.error}</span>`, 'error', 10)
-              } else {   
-                  alertify.set('notifier', 'position', 'top-center');
-                  alertify.notify(`<span style="color: white; font-weight: bold;">Document deleted successfully!</span>`, 'success', 10)     
-                  setTimeout(() => {
-                      location.reload()
-                  }, 2000);
-              }
-          })
-          .catch(err => {
-              console.log(err)
-              alertify.set('notifier', 'position', 'top-center');
-              return alertify.notify('<span style="color: white; font-weight: bold;">An error occurred, please check internet connection, refresh and try again</span>', 'error', 10)
-          })
-    })
-  })
-}
+
+
+const deleteCart = (e) => {
+      console.log(e)
+    http.delete(`admin/api/deleteImage/${e.currentTarget.dataset.del}`)
+        .then(response => {
+            if (response.error) {
+                alertify.set('notifier', 'position', 'top-center');
+                return alertify.notify(`<span style="color: white; font-weight: bold;">${response.error}</span>`, 'error', 10)
+            } else {   
+                alertify.set('notifier', 'position', 'top-center');
+                alertify.notify(`<span style="color: white; font-weight: bold;">Document deleted successfully!</span>`, 'success', 10)     
+                setTimeout(() => {
+                    location.reload()
+                }, 2000);
+            }
+        })
+        .catch(err => {
+            console.log(err)
+            alertify.set('notifier', 'position', 'top-center');
+            return alertify.notify('<span style="color: white; font-weight: bold;">An error occurred, please check internet connection, refresh and try again</span>', 'error', 10)
+        })
+  }
 
 
 // function download_file(fileURL, fileName) {
