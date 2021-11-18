@@ -27,11 +27,14 @@ function loginUser(e){
           return alertify.notify(`<p style="color: white;">${response.error}</p>`, 'error', 10) 
         }else{
           if(response.token){
-            console.log(response)
+            console.log(response,'guyyy')
             localStorage.setItem('@pfxnet-admin-token', JSON.stringify(response.token))
             localStorage.setItem('@pfxnet-admin-user', JSON.stringify(response.user))
             localStorage.setItem('@pfxnet-admin-priviledges', JSON.stringify(response.priviledges))
-            //location.replace(`http://localhost:8003/home`);
+            localStorage.setItem('@pfxnet-admin-notification', JSON.stringify(response.adminNotification))
+            
+       
+          // location.replace(`http://localhost:8003/home`);
             // location.replace(`https://pfxnet-admin.herokuapp.com/home`);
            location.replace(`https://admin.pfxnet.com/home`);
           }

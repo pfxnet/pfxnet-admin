@@ -141,3 +141,50 @@ const transferFundFunc = (e) => {
 
 
 transferFund.addEventListener("submit", (e) => transferFundFunc(e))
+
+
+
+
+const addCommision = document.querySelector("#addToCommision");
+
+const addCommisionFunc = (e) => {
+    e.preventDefault()
+    console.log(e)
+
+    var formData = new FormData(addCommision)
+    const userId =  formData.get('userID')
+    const amount = Number(formData.get('amount'))
+    
+    const btn = document.querySelector('#addCommisionBtn')
+    btn.value = "Processing...";
+
+    const data = {
+        userId, amount
+    }
+
+    //stopped
+
+    http.post('admin/api/addToCommission', data)
+        .then((response)=>{
+        btn.value = "Processing..";
+        console.log(response)
+        if(!response.success){
+             btn.value = "Add Commission";
+            alertify.set('notifier','position', 'top-center');
+            return alertify.notify(`<p style="color: white;">${response.error}</p>`, 'error', 10) 
+        }
+            btn.value = "Add Commission";
+        alertify.set('notifier', 'position', 'top-center');
+        alertify.notify(`<span style="color: white; font-weight: bold;">${response.success}</span>`, 'success', 10)     
+        })
+        .catch((e)=>{
+        console.log(e.message)
+        btn.value = "Deduct Fund";
+        alertify.set('notifier','position', 'top-center');
+        return alertify.notify('An error occurred, please check internet connection, refresh and try again', 'error', 10) 
+    })
+
+}
+
+
+addCommision.addEventListener("submit", (e) => addCommisionFunc (e))

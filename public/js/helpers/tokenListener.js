@@ -12,9 +12,16 @@ if(getAdmin === false && window.location.pathname !== '/') {
 }
 
 if(getAdmin) {
+	   
     token = JSON.parse(localStorage.getItem('@pfxnet-admin-token'))
     user =  JSON.parse(localStorage.getItem('@pfxnet-admin-user'))
     priviledges =   JSON.parse(localStorage.getItem('@pfxnet-admin-priviledges'))
+    adminNotification =   JSON.parse(localStorage.getItem('@pfxnet-admin-notification'))
+    
+     document.querySelector("#notification").style.background = 'skyblue';
+     document.querySelector("#notification").innerHTML = adminNotification;
+     
+   
 }
 
 

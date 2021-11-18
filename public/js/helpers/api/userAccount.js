@@ -180,6 +180,53 @@ changePassNewBtn.addEventListener('click', (e) => userPasswordChange(e))
 
 
 
+//enableDisableUserBtn
+
+
+
+//Trigger enableDisableUserBtn
+const enableDisableUserBtn = document.querySelector("#enableDisableUserBtn");
+
+const enableDisableUser = (e) => {
+    e.preventDefault();
+
+    const data = {
+        userId: document.querySelector("#userId_for_disable").value
+       
+    }
+
+    console.log(data)
+
+    enableDisableUserBtn.textContent = 'Processing...'
+    http.post('admin/api/enableDisableUser', data)
+    .then(response => {
+        // enableDisableUserBtn.textContent = 'Change Password'
+        // console.log(response)
+        if (response.error) {
+             enableDisableUserBtn.textContent = 'Enable/Disable User'
+            alertify.set('notifier', 'position', 'top-center');
+            return alertify.notify(`<span style="color: white; font-weight: bold;">${response.error}</span>`, 'error', 10)
+        } else {   
+            enableDisableUserBtn.textContent = 'Done'
+             document.querySelector("#userId_for_disable").value = ''
+            alertify.set('notifier', 'position', 'top-center');
+            alertify.notify(`<span style="color: white; font-weight: bold;">${response.success}</span>`, 'success', 10)     
+            // setTimeout(() => {
+            //     location.reload()
+            // }, 2000);
+        }
+    }).catch(err => {
+        enableDisableUserBtn.textContent = 'Enable/Disable User'
+        console.log(err)
+        alertify.set('notifier', 'position', 'top-center');
+        return alertify.notify('<span style="color: white; font-weight: bold;">An error occurred, please check internet connection, refresh and try again</span>', 'error', 10)
+    })
+
+}
+
+
+enableDisableUserBtn.addEventListener('click', (e) => enableDisableUser(e))
+
 
 
 
