@@ -44,7 +44,7 @@ passBtn.addEventListener('click', (e) => passwordChange(e))
 
 
 
-
+//here
 
 
 //Trigger disbusrt btn from the cashOut api
@@ -228,6 +228,47 @@ const enableDisableUser = (e) => {
 enableDisableUserBtn.addEventListener('click', (e) => enableDisableUser(e))
 
 
+
+//Trigger enableDisableUserBtn
+const updateBankDetailsBtn = document.querySelector("#updateBankDetailsBtn");
+
+const updateUserBankDetail = (e) => {
+    e.preventDefault();
+    const data = {
+        userId: document.querySelector("#userId_bankDetail").value,
+        accountNumber: document.querySelector("#accountNumber").value,
+        accountName: document.querySelector("#bankAccountName").value,
+        accountType: document.querySelector("#bankAccountType").value,
+        bankName: document.querySelector("#bankName").value
+    }
+    updateBankDetailsBtn.textContent = 'Processing...'
+    http.post('admin/api/bankDetailChange', data)
+    .then(response => {
+        if (response.error) {
+            updateBankDetailsBtn.textContent = 'Update'
+            alertify.set('notifier', 'position', 'top-center');
+            return alertify.notify(`<span style="color: white; font-weight: bold;">${response.error}</span>`, 'error', 10)
+        } else {   
+            updateBankDetailsBtn.textContent = 'Done'
+            document.querySelector("#userId_bankDetail").value = ''
+            document.querySelector("#accountNumber").value = ''
+            document.querySelector("#bankAccountName").value = ''
+            document.querySelector("#bankAccountType").value = ''
+            document.querySelector("#bankName").value = ''
+            alertify.set('notifier', 'position', 'top-center');
+            alertify.notify(`<span style="color: white; font-weight: bold;">${response.success}</span>`, 'success', 10)     
+           
+        }
+    }).catch(err => {
+        updateBankDetailsBtn.textContent = 'Update'
+        
+        alertify.set('notifier', 'position', 'top-center');
+        return alertify.notify('<span style="color: white; font-weight: bold;">An error occurred, please check internet connection, refresh and try again</span>', 'error', 10)
+    })
+
+}
+
+updateBankDetailsBtn.addEventListener('click', (e) => updateUserBankDetail(e))
 
 
 

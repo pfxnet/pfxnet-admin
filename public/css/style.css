@@ -1769,9 +1769,17 @@ ul.tab-custon-design li.active a, ul.tab-review-design li.active a{
 #myTab3.tab-review-design li a{
 	padding-right: 40px;
 	text-transform:capitalize;
+    
 }
+#myTab3.tab-review-design li{
+	margin-bottom: 25px;
+    
+}
+
+
 #myTab3.tab-review-design li i{
 	margin-right:5px;
+   
 }
 .custom-product-edit{
 	background:#1b2a47;
